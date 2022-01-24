@@ -36,6 +36,7 @@ sudo /usr/local/nginx/sbin/nginx -s stop
 > Open nginx.conf file， vim nginx.conf
 
 ![截屏2021-08-25 上午10.23.08](https://th.bing.com/th/id/OIP.V6BPsj0qgAVakEIOPdC6tAHaDt?pid=ImgDet&rs=1)
+<center><img src="https://th.bing.com/th/id/OIP.V6BPsj0qgAVakEIOPdC6tAHaDt?pid=ImgDet&rs=1" /> </center>
 
 > 1. Change the "listen" to 80 port in server configuration
 > 2. Put the Web page into the HTML directory, then change the name of the web file to index.html. 
