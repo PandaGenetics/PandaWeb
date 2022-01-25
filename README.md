@@ -1,4 +1,4 @@
-## PandaWeb tutorial hahahaha
+## PandaWeb tutorial
 
 * How to run
 * How to develop
