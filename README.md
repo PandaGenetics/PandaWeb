@@ -76,4 +76,11 @@
 ```bash
 # install golang
 brew install go
+go get -u github.com/gin-gonic/gin
+# go mod init PandaGenetics
+# go mody tidy
+```
+run in terminal
+```bash
+go run main.go
 ```
