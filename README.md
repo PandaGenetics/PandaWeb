@@ -40,7 +40,7 @@
 >
 > Open nginx.conf file (vim nginx.conf)
 
-![截屏2021-08-25 上午10.23.08](file:///Users/macbook/Documents/README.assets/%E6%88%AA%E5%B1%8F2021-08-25%20%E4%B8%8A%E5%8D%8810.23.08.png?lastModify=1643092194)
+![Ngnix config](images/Nginx_configuration.png)
 
 > 1. Change the "listen" to 80 port in server configuration
 > 2. Put the Web page into the HTML directory, then change the name of the web file to index.html. 
