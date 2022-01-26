@@ -1,4 +1,4 @@
-## PandaWeb tutorial
+# PandaWeb tutorial
 
 * How to install nginx
 * How to run nginx
@@ -7,10 +7,14 @@
 * How to PR (pull request)
 * How to follow
 
+## 1 The requirements
+* nginx
+* the latest golang
+* the Docker
 
-
-## How to install nginx
-
+## 2 Development and installation
+### 2.1 install in Cluster
+#### 2.1.1 How to install nginx
 ```bash
  # Download nginx install package
  wget https://nginx.org/download/nginx-1.20.1.tar.gz
@@ -30,9 +34,7 @@
  sudo /usr/local/nginx/sbin/nginx -s stop
 ```
 
-
-
-## nginx configuration
+#### 2.1.2 nginx configuration
 
 > cd into /usr/local/nginx/conf file
 >
@@ -45,7 +47,7 @@
 > 3. Restart Nginx
 > 4. Then you will open th web page after access the current IP address. If there are no web page displayed, the firewall may be disabled.
 
-#### Here is the Firewall configuration
+#### 2.1.3 Here is the Firewall configuration
 
 ```bash
  # Firewall Configuration
@@ -69,4 +71,9 @@
  firewall-cmd --reload   
  # Check all the enable ports
  firewall-cmd --list-ports   
+```
+### 2.2 install in MacOS
+```bash
+# install golang
+brew install go
 ```
