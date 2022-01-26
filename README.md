@@ -84,3 +84,14 @@ run in terminal
 ```bash
 go run main.go
 ```
+Install Docker Desktop on Mac
+[Docker installation](https://docs.docker.com/engine/install/)
+
+```bash
+docker build . -t pandaweb
+docker container ls -a
+docker run -d -p 8080:8080 pandaweb
+docker container ls -a
+docker stop docker_ID
+```
+
