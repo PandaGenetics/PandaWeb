@@ -86,7 +86,7 @@ go run main.go
 ```
 Install Docker Desktop on Mac
 [Docker installation](https://docs.docker.com/engine/install/)
-
+run docker
 ```bash
 docker build . -t pandaweb
 docker container ls -a
