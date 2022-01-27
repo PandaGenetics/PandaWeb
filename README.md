@@ -7,7 +7,7 @@
 * How to PR (pull request)
 * How to follow
 
-## 1 The requirements
+## 1 The Prerequisites
 * nginx
 * the latest golang
 * the Docker
