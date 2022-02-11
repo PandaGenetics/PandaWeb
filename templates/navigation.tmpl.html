@@ -1,0 +1,37 @@
+{{define "navigation"}}
+    <div class="row" style="background-image:url(img/navbar-background.jpeg)">
+
+        <div class="row" >
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11">
+                <h1>
+                    <a href="#" style="color: #49747c;">Giant Panda Genetic Data</a>
+                </h1>
+            </div>
+        </div>
+
+        <!-- navbar-fixed-top -->
+        <nav class="nav .navbar-collapse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div id="navbar" class="collapse navbar-collapse" style="padding-left: 0%;">
+                    <ul class="nav navbar-nav my-2">
+                        <li><a href="index">Home</a></li>
+                        <li class="active"><a href="genebrowser">Genome Browser</a></li>
+                        <li><a href="pedigree" target="_blank">Pedigree</a></li>
+                        <li><a href="#">Individual</a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
+
+    </div>
+{{end}}
