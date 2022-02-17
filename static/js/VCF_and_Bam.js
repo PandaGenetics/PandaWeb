@@ -63,65 +63,8 @@
     searchable: false
 },
 
-    "phastCons": {
-    name: "phastCons",
-    url: "//storage.googleapis.com/elegansvariation.org/browser_tracks/elegans.phastcons.bw",
-    order: 6,
-    displayMode: "SQUISHED",
-    color: "#000000",
-    visibilityWindow: 20000
-},
-    "phyloP": {
-    name: "phyloP",
-    url: "//storage.googleapis.com/elegansvariation.org/browser_tracks/elegans.phylop.bw",
-    order: 6,
-    displayMode: "SQUISHED",
-    color: "#000000",
-    visibilityWindow: 20000
-},
-    "Transposons": {
-    name: "Transposons",
-    url: "//storage.googleapis.com/elegansvariation.org/browser_tracks/laricchia2017.tes_cendr.bed.gz",
-    order: 6,
-    displayMode: "EXPANDED",
-    color: "#34CB80",
-    visibilityWindow: 20000000
-},
-    "Divergent Regions Summary": {
-    name: "Divergent Regions Summary",
-    url: "//storage.googleapis.com/elegansvariation.org/browser_tracks/lee2020.divergent_regions_all.bed.gz",
-    order: 6,
-    height: 40,
-    displayMode: "EXPANDED",
-    color: "#CB3466",
-    visibilityWindow: 20000000
-},
-    "Divergent Regions": {
-    name: "Divergent Regions",
-    url: "//storage.googleapis.com/elegansvariation.org/browser_tracks/lee2020.divergent_regions_strain.bed.gz",
-    order: 6,
-    height: 200,
-    displayMode: "EXPANDED",
-    color: "#9B4763",
-    visibilityWindow: 20000000
-},
-    "Dust": {
-    name: "Dust",
-    url: "//storage.googleapis.com/elegansvariation.org/browser_tracks/c_elegans.PRJNA13758.WS276.dust.bed.gz",
-    order: 6,
-    displayMode: "SQUISHED",
-    color: "#583E1A",
-    visibilityWindow: 20000000
-},
-    "Repeat Masker": {
-    name: "Repeat Masker",
-    url: "//storage.googleapis.com/elegansvariation.org/browser_tracks/c_elegans.PRJNA13758.WS276.repeat_masker.bed.gz",
-    order: 6,
-    displayMode: "SQUISHED",
-    color: "#CB8C34",
-    visibilityWindow: 20000000
-}
 };
+
 
     function reload_tracks() {
     $('.track-select').each(function(i, obj) {

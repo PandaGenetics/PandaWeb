@@ -76,8 +76,7 @@ th {
     margin-top: 20px;
 }
 
-header .navbar-nav li.dropdown > a,
-header .navbar-nav li.nav-item > a {
+header .navbar-nav li.dropdown > a, header .navbar-nav li.nav-item > a {
     color: #46186F;
     font-size: 1.1em;
 }
