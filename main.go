@@ -13,6 +13,7 @@ func main() {
 	router.Static("/static", "static/")
 
 	router.Static("/img", "images")
+	router.Static("/gene", "data")
 
 	router.GET("", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "homePage.html", gin.H{})
