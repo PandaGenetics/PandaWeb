@@ -50,3 +50,14 @@ git checkout # switch branches or restore working tree files.
 ```bash
 git fetch # Download objects and refs from another repository.
 ```
+
+## Screen
+-----
+```bash
+yum -y install screen
+apt get iy screen
+screen # create a screen view
+Ctrl + A + D # reback to 
+screen -ls
+screen -r ID
+```
