@@ -54,10 +54,20 @@ git fetch # Download objects and refs from another repository.
 ## [Screen](https://linuxize.com/post/how-to-use-linux-screen/)
 -----
 ```bash
+# install in CentOS
 yum -y install screen
+# install in Ubuntu
 apt get iy screen
-screen # create a screen view
-Ctrl + A + D # reback to 
+# create a screen task
+screen
+# create a named screen task
+screen -S Name
+# exit current task 
+exit 
+# list all screen task
 screen -ls
+# attack a screen task
 screen -r ID
+# detacted current screen task
+Ctrl + A + D 
 ```
