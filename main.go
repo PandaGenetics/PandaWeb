@@ -27,5 +27,5 @@ func main() {
 		c.HTML(http.StatusOK, "pedigree.html", gin.H{})
 	})
 
-	router.Run(":8080")
+	router.Run(":8081")
 }
