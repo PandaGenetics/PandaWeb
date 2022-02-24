@@ -71,3 +71,5 @@ screen -r ID
 # detacted current screen task
 Ctrl + A + D 
 ```
+## Safari CROS Issue
+solution: safari > Development > disable-cross-Origin Restriction
