@@ -96,6 +96,7 @@ docker stop docker_ID
 ```
 ### 2.3 update local
 ```bash
+# run in local repository root
 git stash #
 git pull
 ```
