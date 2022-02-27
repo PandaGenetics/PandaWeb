@@ -82,7 +82,7 @@ go get -u github.com/gin-gonic/gin
 ```
 run in terminal
 ```bash
-go run main.go
+go run -o main main.go
 ```
 Install Docker Desktop on Mac
 [Docker installation](https://docs.docker.com/engine/install/)
@@ -94,4 +94,6 @@ docker run -d -p 8080:8080 pandaweb
 docker container ls -a
 docker stop docker_ID
 ```
-
+### 2.3 update local
+git stash #
+git pull
