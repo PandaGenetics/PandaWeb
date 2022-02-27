@@ -95,5 +95,7 @@ docker container ls -a
 docker stop docker_ID
 ```
 ### 2.3 update local
+```bash
 git stash #
 git pull
+```
