@@ -74,5 +74,5 @@ Ctrl + A + D
 ## Safari CROS Issue
 solution: safari > Development > disable-cross-Origin Restriction
 
-## visilization
+## visualization
 [Javascript and R](https://bioconnector.github.io/workshops/r-interactive-viz.html#shiny)
