@@ -100,3 +100,11 @@ docker stop docker_ID
 git stash #
 git pull
 ```
+
+```bash
+gt gff3 -sortlines -tidy -retainids yourfile.gff > yourfile.sorted.gff bgzip yourfile.sorted.gff
+tabix yourfile.sorted.gff.gz
+
+bcftools sort file.vcf > file.sorted.vcf bgzip file.sorted.vcf
+tabix file.sorted.vcf.gz
+```
