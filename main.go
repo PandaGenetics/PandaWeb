@@ -15,6 +15,14 @@ type track struct {
 	IndexURL         string
 	VisibilityWindow int64
 }
+type TrackBam struct {
+	track
+	//Chr,position,option,direction
+	Chr       string
+	Position  int
+	Option    string
+	Direction string
+}
 
 var mRNA = track{
 	"annotation",
