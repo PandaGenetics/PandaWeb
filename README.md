@@ -100,11 +100,13 @@ docker stop docker_ID
 git stash #
 git pull
 ```
-
+### 2.4 IGV tracks configuration
 ```bash
-gt gff3 -sortlines -tidy -retainids yourfile.gff > yourfile.sorted.gff bgzip yourfile.sorted.gff
+gt gff3 -sortlines -tidy -retainids yourfile.gff > yourfile.sorted.gff 
+bgzip yourfile.sorted.gff
 tabix yourfile.sorted.gff.gz
 
-bcftools sort file.vcf > file.sorted.vcf bgzip file.sorted.vcf
+bcftools sort file.vcf > file.sorted.vcf 
+bgzip file.sorted.vcf
 tabix file.sorted.vcf.gz
 ```
