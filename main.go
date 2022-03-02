@@ -8,7 +8,7 @@ import (
 const igvRoot = "http://192.168.38.70:8081/gene/v3"
 
 type track struct {
-	TrackType            string
+	TrackType        string
 	Name             string
 	Format           string
 	Url              string
@@ -38,6 +38,14 @@ var BAC = track{
 	igvRoot + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz.tbi",
 	1000000}
 
+var BAClatest = track{
+	"annotation",
+	"BAClatest",
+	"gff3",
+	igvRoot + "/BAC/current_sorted.gff3.gz",
+	igvRoot + "/BAC/current_sorted.gff3.gz.tbi",
+	100000000}
+
 //var igvTracks = gin.H{"mRNA": mRNA, "gap": gap, "BAC": BAC}
 
 func main() {
@@ -59,7 +67,7 @@ func main() {
 	})
 
 	router.GET("/genebrowser2", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "geneBrowser@v2.html", gin.H{"tracks":[]track{mRNA,gap,BAC}}) // binds data
+		c.HTML(http.StatusOK, "geneBrowser@v2.html", gin.H{"tracks": []track{mRNA, gap, BAC, BAClatest}}) // binds data
 	})
 
 	router.GET("/pedigree", func(c *gin.Context) {
