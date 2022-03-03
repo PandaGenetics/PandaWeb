@@ -107,10 +107,10 @@
                     "tracks":[
                         {{ range .tracks}}
                             {
-                                type:"{{ .TrackType}}",
-                                format:"{{.Format}}",
-                                name:"{{.Name}}",
-                                url:"{{.Url}}",
+                                type: "{{ .TrackType}}",
+                                format: "{{.Format}}",
+                                name: "{{.Name}}",
+                                url: "{{.Url}}",
                                 indexURL:"{{.IndexURL}}",
                                 visibilityWindow:"{{printf "%d" .VisibilityWindow}}",
                             },

@@ -1,27 +1,62 @@
 package main
 
 import (
+	"bufio"
 	"github.com/gin-gonic/gin"
+	"log"
 	"net/http"
+	"os"
+	"strings"
 )
 
 const igvRoot = "http://192.168.38.70:8081/gene/v3"
 
 type track struct {
-	TrackType        string
-	Name             string
-	Format           string
-	Url              string
-	IndexURL         string
-	VisibilityWindow int64
+	TrackType        string `json:"type"`
+	Format           string `json:"format"`
+	Name             string `json:"name"`
+	Url              string `json:"url"`
+	IndexURL         string `json:"indexURL"`
+	VisibilityWindow int64  `json:"visibilityWindow"`
+}
+
+type Sort struct {
+	//Chr,position,option,direction
+	Chr       string `json:"chr"'`
+	Position  string `json:"position"`
+	Option    string `json:"option"`
+	Direction string `json:"direction"`
 }
 type TrackBam struct {
 	track
-	//Chr,position,option,direction
-	Chr       string
-	Position  int
-	Option    string
-	Direction string
+	Sort Sort `json:"sort"`
+}
+
+func NewTrackBam(line string) TrackBam {
+	// f refers to the field of each line.
+	f := strings.Split(line, ",")
+	// #Type,Format,Name,Chr,position,option,direction,URL
+	root := ""
+	return TrackBam{
+		track{f[0], f[1], f[7], root + f[7], root + f[7] + ".tbi", 10000},
+		Sort{f[3], f[4], f[5], f[6]}}
+}
+func LoadBam(path string) map[string]TrackBam {
+	var bamTracks = make(map[string]TrackBam, 0)
+	file, err := os.Open(path)
+	defer file.Close()
+	if err != nil {
+		log.Println("To Open file encounters a error: ", err)
+	}
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		if scanner.Bytes()[0] != '#' {
+			line := scanner.Text()
+			tb := NewTrackBam(line)
+			bamTracks[tb.Name] = tb
+		}
+	}
+	return bamTracks
 }
 
 var mRNA = track{
@@ -71,7 +106,8 @@ func main() {
 	})
 
 	router.GET("/genebrowser", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "geneBrowser.html", gin.H{})
+		c.HTML(http.StatusOK, "geneBrowser.html", gin.H{"tracks": LoadBam("data/Bam_Filename.csv"),
+			"root": "http://192.168.38.70:8081/gene"})
 	})
 
 	router.GET("/genebrowser2", func(c *gin.Context) {

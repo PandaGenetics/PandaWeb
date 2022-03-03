@@ -60,99 +60,23 @@
                                 </label>
                             </td> 
                         </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="003_VCF">VCF
-                                </label>
-                            </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="003_bam">BAM
-                                </label>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>001</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="001_VCF">VCF
-                                </label>
-                            </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="001_bam">BAM
-                                </label>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="002_VCF">VCF
-                                </label>
-                            </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="002_bam">BAM
-                                </label>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="003_VCF">VCF
-                                </label>
-                            </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="003_bam">BAM
-                                </label>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>001</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="001_VCF">VCF
-                                </label>
-                            </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="001_bam">BAM
-                                </label>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="002_VCF">VCF
-                                </label>
-                            </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="002_bam">BAM
-                                </label>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="003_VCF">VCF
-                                </label>
-                            </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="003_bam">BAM
-                                </label>
-                            </td> 
-                        </tr>
                     </tbody> 
                 </table>
+
+                <ul>
+                    {{ range $key, $value := .tracks}}
+                        <li>
+                            <a href="#" onclick="igv.browser.LoadTrack({
+                                    type: '{{$value.TrackType}}',
+                                    format: '{{$value.Format}}',
+                                    name: '{{$value.Name}}',
+                                    url: '{{$value.Url}}',
+                                    indexURL: '{{$value.IndexURL}}',
+                                    visibilityWindow: '{{$value.VisibilityWindow}}',
+                                });">{{ $key }}</a>
+                        </li>
+                    {{end}}
+                </ul>
             </div> 
         </div>
 
@@ -189,9 +113,6 @@
                 </div>
         </div>
 
-       
-
-      
         <div class="col-lg-3 col-md-6" role="complementary">
             <section id="block-block-5" class="block block-block clearfix">
                 <h3 class="block-title" style="text-align: center;">Genetic Summary</h3>
@@ -213,8 +134,8 @@
                 reference:{
                     "id":"Panda",
                     "name":"Panda 2021",
-                    "fastaURL":"gene/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa",
-                    "indexURL":"gene/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa.fai",
+                    "fastaURL":"{{ .root}}/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa",
+                    "indexURL":"{{ .root}}/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa.fai",
                     "tracks":[
                         {   
                             type: "alignment",
@@ -228,17 +149,6 @@
                                 option: "BASE",
                                 direction: "ASC"
                             },
-                        },
-                        {  
-                            type: "variant",
-                            format: "vcf",
-                            url: "https://s3.amazonaws.com/1000genomes/release/20130502/ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz",
-                            indexURL: "https://s3.amazonaws.com/1000genomes/release/20130502/ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz.tbi",
-                            name: "1KG variants (chr22)",
-                            squishedCallHeight: 1,
-                            expandedCallHeight: 4,
-                            displayMode: "squished",
-                            visibilityWindow: 1000,
                         },
                     ]
                 },
