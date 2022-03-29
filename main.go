@@ -2,11 +2,12 @@ package main
 
 import (
 	"bufio"
-	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 const igvRoot = "http://192.168.38.70:8081/gene/v3"
