@@ -125,5 +125,9 @@ func main() {
 		c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
 	})
 
+	router.GET("/samplingrequest", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "samplingRequest.html", gin.H{})
+	})
+
 	router.Run(":8081")
 }

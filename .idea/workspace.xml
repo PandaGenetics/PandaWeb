@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="add panda genome v2 tracks in genebrowser.html page">
-      <change afterPath="$PROJECT_DIR$/data/samplingSummary.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-repository/sampling/sampling.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-repository/sampling/sampling_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/samplingSummary.html" afterDir="false" />
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="add sampling system">
+      <change afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/samplingSummary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/samplingSummary.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/navigation.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/navigation.tmpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingSummary.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingSummary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +19,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -82,7 +87,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="change" />
     <MESSAGE value="add panda genome v2 tracks in genebrowser.html page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add panda genome v2 tracks in genebrowser.html page" />
+    <MESSAGE value="add sampling system" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sampling system" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
