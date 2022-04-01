@@ -77,92 +77,90 @@
     <a href="samplingrequest">SAMPLING REQUEST</a>
     <a href="samplingsummary">SAMPLING SUMMARY</a>
     <form action="/action_page.php">
-      <div class="row">
-        <div class="col-25">
-          <label for="panda_name">采血个体（大熊猫姓名）</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="panda_name" name="panda_name" placeholder="Panda Name">
-        </div>
-      </div>
+          <div class="row">
+              <div class="col-25">
+                  <label for="panda_name">采血个体（大熊猫姓名）</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="panda_name" name="panda_name" placeholder="Panda Name">
+              </div>
+          </div>
 
-
-      <div class="row">
-        <div class="col-25">
-          <label>需求血量</label>
-        </div>
-        <div class="col-75 ">
-          <div class="col-25">
-            <label for="request_for_coagulation">不抗凝</label>
-            <input type="text" id="request_for_coagulation" name="request_for_coagulation" placeholder="2-3 mL">
+          <div class="row">
+              <div class="col-25">
+                  <label>需求血量</label>
+              </div>
+              <div class="col-75 ">
+                  <div class="col-25">
+                      <label for="request_for_coagulation">不抗凝</label>
+                      <input type="text" id="request_for_coagulation" name="request_for_coagulation" placeholder="2-3 mL">
+                  </div>
+                  <div class="col-25">
+                      <label for="request_for_heparin">肝素钠抗凝</label>
+                      <input type="text" id="request_for_heparin" name="request_for_heparin" placeholder=" mL">
+                  </div>
+                  <div class="col-25">
+                      <label for="request_for_edta">EDTA-K2抗凝</label>
+                      <input type="text" id="request_for_edta" name="request_for_edta" placeholder=" mL">
+                  </div>
+                  <div class="col-25">
+                      <label for="request_for_other">其他</label>
+                      <input type="text" id="request_for_other" name="request_for_other" placeholder=" mL">
+                  </div>
+              </div>
           </div>
-          <div class="col-25">
-            <label for="request_for_heparin">肝素钠抗凝</label>
-            <input type="text" id="request_for_heparin" name="request_for_heparin" placeholder=" mL">
+          <div class="row">
+              <div class="col-25">
+                  <label for="purpose">血样用途</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="purpose" name="purpose" placeholder="">
+              </div>
           </div>
-          <div class="col-25">
-            <label for="request_for_edta">EDTA-K2抗凝</label>
-            <input type="text" id="request_for_edta" name="request_for_edta" placeholder=" mL">
+          <div class="row">
+              <div class="col-25">
+                  <label for="project">项目</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="project" name="project" placeholder="">
+              </div>
           </div>
-          <div class="col-25">
-            <label for="request_for_other">其他</label>
-            <input type="text" id="request_for_other" name="request_for_other" placeholder=" mL">
+          <div class="row">
+              <div class="col-25">
+                  <label for="iacuc">IACUC编号</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="iacuc" name="iacuc" placeholder="">
+              </div>
           </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-25">
-          <label for="purpose">血样用途</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="purpose" name="purpose" placeholder="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="project">项目</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="project" name="project" placeholder="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="iacuc">IACUC编号</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="iacuc" name="iacuc" placeholder="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="project_manager">项目负责人</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="project_manager" name="project_manager" placeholder="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="contact">联系人</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="contact" name="contact" placeholder="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="notes">备注</label>
-        </div>
-        <div class="col-75">
-          <textarea id="notes" name="notes" placeholder="Write something.." style="height:200px"></textarea>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit">
-      </div>
+          <div class="row">
+              <div class="col-25">
+                  <label for="project_manager">项目负责人</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="project_manager" name="project_manager" placeholder="">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label for="contact">联系人</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="contact" name="contact" placeholder="">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label for="notes">备注</label>
+              </div>
+              <div class="col-75">
+                  <textarea id="notes" name="notes" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+          </div>
+          <br>
+          <div class="row">
+              <input type="submit" value="Submit">
+          </div>
     </form>
   </div>
 

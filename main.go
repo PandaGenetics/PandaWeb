@@ -24,7 +24,7 @@ type track struct {
 
 type Sort struct {
 	//Chr,position,option,direction
-	Chr       string `json:"chr"'`
+	Chr       string `json:"chr"`
 	Position  string `json:"position"`
 	Option    string `json:"option"`
 	Direction string `json:"direction"`

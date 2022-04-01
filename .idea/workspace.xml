@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="add sampling system">
-      <change afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="Add Sampling Request Page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/samplingSummary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/samplingSummary.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/samplingSummary.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingSummary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,8 @@
     <MESSAGE value="change" />
     <MESSAGE value="add panda genome v2 tracks in genebrowser.html page" />
     <MESSAGE value="add sampling system" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sampling system" />
+    <MESSAGE value="Add Sampling Request Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Sampling Request Page" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
