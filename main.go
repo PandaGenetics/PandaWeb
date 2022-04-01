@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"github.com/PandaGenetics/PandaWeb/go-repository/sampling"
 	"log"
 	"net/http"
 	"os"
@@ -117,6 +118,11 @@ func main() {
 
 	router.GET("/pedigree", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "pedigree.html", gin.H{})
+	})
+
+	records := sampling.NewSampling("data/samplingSummary.csv")
+	router.GET("/samplingsummary", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
 	})
 
 	router.Run(":8081")
