@@ -3,8 +3,10 @@ package sampling
 import (
 	"encoding/csv"
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"io"
 	"log"
+	"net/http"
 	"os"
 	"strings"
 )
@@ -63,4 +65,33 @@ func NewSampling(path string) []Sampling {
 		}
 	}
 	return SamplingRecords
+}
+
+var records = NewSampling("data/samplingSummary.csv")
+
+func SampleSummary(c *gin.Context) {
+	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
+}
+
+func SampleAppend(c *gin.Context) {
+	NewRecord := Sampling{
+		string(len(records) + 1),
+		c.PostForm("panda_name"),
+		c.PostForm("request_for_coagulation"),
+		c.PostForm("request_for_heparin"),
+		c.PostForm("request_for_edta"),
+		c.PostForm("request_for_other"),
+		c.PostForm("purpose"),
+		c.PostForm("project"),
+		c.PostForm("iacuc"),
+		c.PostForm("project_manager"),
+		c.PostForm("contact"),
+		c.PostForm("notes"),
+	}
+	records = append(records, NewRecord)
+	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
+}
+
+func SampleRequest(c *gin.Context) {
+	c.HTML(http.StatusOK, "samplingRequest.html", gin.H{})
 }
