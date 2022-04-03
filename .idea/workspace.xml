@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="Add Sampling Request Page">
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="simplify main function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/sampling/sampling.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/sampling/sampling.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -66,6 +66,12 @@
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="go.autoimport" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/go-repository/genomeBrowser" />
+      <recent name="$PROJECT_DIR$/go-repository" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -87,7 +93,14 @@
     <MESSAGE value="add panda genome v2 tracks in genebrowser.html page" />
     <MESSAGE value="add sampling system" />
     <MESSAGE value="Add Sampling Request Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Sampling Request Page" />
+    <MESSAGE value="correct indentation" />
+    <MESSAGE value="create a new package for igv logic in /go-repository/genomebrowser/igv.go" />
+    <MESSAGE value="change navigation url" />
+    <MESSAGE value="move and rename file" />
+    <MESSAGE value="igv route" />
+    <MESSAGE value="rename file from v2 to v3" />
+    <MESSAGE value="simplify main function" />
+    <option name="LAST_COMMIT_MESSAGE" value="simplify main function" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
