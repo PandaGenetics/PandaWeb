@@ -30,8 +30,9 @@ func main() {
 	})
 
 	router.GET("/samplingsummary", sampling.SampleSummary)
-	router.POST("/samplingsummary", sampling.SampleAppend)
+	router.POST("/samplingsummary", sampling.SampleDelete)
 	router.GET("/samplingrequest", sampling.SampleRequest)
+	router.POST("/samplingrequest", sampling.SampleAppend)
 
 	router.Run(":8081")
 }

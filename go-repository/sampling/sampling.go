@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// Sampling records a list of information for requesting panda sample.
 type Sampling struct {
 	ID                    string `json:"id"`
 	PandaName             string `json:"panda_name"`
@@ -32,7 +33,7 @@ func (s *Sampling) String() string {
 		s.Contact, s.Notes)
 }
 
-type SamplingRecords []Sampling
+type SamplingRecords map[string]Sampling // hash table, key is ID
 
 func (sr *SamplingRecords) String() string {
 	var s = strings.Builder{}
@@ -42,8 +43,9 @@ func (sr *SamplingRecords) String() string {
 	return s.String()
 }
 
-func NewSampling(path string) []Sampling {
-	var SamplingRecords = make([]Sampling, 0)
+// NewSampling reads records from comma-delimited file.
+func NewSampling(path string) SamplingRecords {
+	var SR = make(SamplingRecords, 0)
 	f, err := os.Open(path)
 	if err != nil {
 		log.Fatalln("Open error: ", err)
@@ -55,16 +57,45 @@ func NewSampling(path string) []Sampling {
 		if err == io.EOF {
 			break
 		}
-
 		if len(record) == 12 {
-			line := Sampling{record[0], record[1], record[2],
+			ID := record[0]
+			SR[ID] = Sampling{record[0], record[1], record[2],
 				record[3], record[4], record[5],
 				record[6], record[7], record[8], record[9],
 				record[10], record[11]}
-			SamplingRecords = append(SamplingRecords, line)
 		}
 	}
-	return SamplingRecords
+	return SR
+}
+
+// Save to file
+func (sr *SamplingRecords) SaveToCSV(path string) error {
+	f, err := os.Create(path)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	w := csv.NewWriter(f)
+	for _, item := range *sr {
+		err := w.Write([]string{item.ID, item.PandaName, // write record to file in line-by-line
+			item.RequestForCoagulation, item.RequestForHeparin,
+			item.RequestForEDTA, item.RequestForOther,
+			item.Purpose,
+			item.Project, item.IACUC,
+			item.ProjectManager, item.Contact,
+			item.Notes})
+		if err != nil {
+			return err
+		}
+	}
+	w.Flush()
+	return nil
+}
+
+func (sr *SamplingRecords) DeleteByIDs(IDs []string) {
+	for _, item := range IDs {
+		delete(*sr, item)
+	}
 }
 
 var records = NewSampling("data/samplingSummary.csv")
@@ -73,9 +104,19 @@ func SampleSummary(c *gin.Context) {
 	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
 }
 
+func SampleDelete(c *gin.Context) {
+	deleteItems := c.PostFormArray("delete")
+	records.DeleteByIDs(deleteItems)
+
+	//c.JSON(http.StatusOK, deleteItems)
+	records.SaveToCSV("data/samplingSummary.tab")
+	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
+}
+
 func SampleAppend(c *gin.Context) {
+	NewID := fmt.Sprintf("%d", len(records)+1)
 	NewRecord := Sampling{
-		string(len(records) + 1),
+		NewID,
 		c.PostForm("panda_name"),
 		c.PostForm("request_for_coagulation"),
 		c.PostForm("request_for_heparin"),
@@ -88,7 +129,10 @@ func SampleAppend(c *gin.Context) {
 		c.PostForm("contact"),
 		c.PostForm("notes"),
 	}
-	records = append(records, NewRecord)
+	records[NewID] = NewRecord
+	// Save new requests to file.
+	records.SaveToCSV("data/samplingSummary.tab")
+
 	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
 }
 
