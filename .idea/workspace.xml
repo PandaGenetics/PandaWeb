@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="simplify main function">
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="nosense">
+      <change afterPath="$PROJECT_DIR$/data/2020-Living-Pedigree.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-repository/PandaIndividual/PandaIndividual.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-repository/PandaIndividual/PandaIndividual_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go-repository/sampling/sampling.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/sampling/sampling.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingSummary.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingSummary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +106,9 @@
     <MESSAGE value="igv route" />
     <MESSAGE value="rename file from v2 to v3" />
     <MESSAGE value="simplify main function" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplify main function" />
+    <MESSAGE value="add POST request for form submission" />
+    <MESSAGE value="nosense" />
+    <option name="LAST_COMMIT_MESSAGE" value="nosense" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
