@@ -2,7 +2,6 @@ package PandaIndividual
 
 import (
 	"encoding/csv"
-	"fmt"
 	"io"
 	"log"
 	"os"
@@ -48,8 +47,12 @@ func NewPandaPopulation(path string) PandaPopulation {
 	return PP
 }
 
-var PP = NewPandaPopulation("../../data/2020-Living-Pedigree.csv")
+type Config struct {
+	file       string
+	Population PandaPopulation
+}
 
-func String() {
-	fmt.Println(PP)
+func NewConfig() *Config {
+	file := "data/2020-Living-Pedigree.csv"
+	return &Config{Population: NewPandaPopulation(file)}
 }
