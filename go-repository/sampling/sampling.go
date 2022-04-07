@@ -98,23 +98,34 @@ func (sr *SamplingRecords) DeleteByIDs(IDs []string) {
 	}
 }
 
-var records = NewSampling("data/samplingSummary.csv")
+type Config struct {
+	file    string
+	records SamplingRecords
+}
+
+func NewConfig() *Config {
+	var file = "data/samplingSummary.csv"
+	return &Config{file: file, records: NewSampling(file)}
+}
 
 func SampleSummary(c *gin.Context) {
-	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
+	conf := NewConfig()
+	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": conf.records})
 }
 
 func SampleDelete(c *gin.Context) {
+	conf := NewConfig()
 	deleteItems := c.PostFormArray("delete")
-	records.DeleteByIDs(deleteItems)
+	conf.records.DeleteByIDs(deleteItems)
 
 	//c.JSON(http.StatusOK, deleteItems)
-	records.SaveToCSV("data/samplingSummary.tab")
-	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
+	conf.records.SaveToCSV(conf.file)
+	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": conf.records})
 }
 
 func SampleAppend(c *gin.Context) {
-	NewID := fmt.Sprintf("%d", len(records)+1)
+	conf := NewConfig()
+	NewID := fmt.Sprintf("%d", len(conf.records)+1)
 	NewRecord := Sampling{
 		NewID,
 		c.PostForm("panda_name"),
@@ -129,11 +140,11 @@ func SampleAppend(c *gin.Context) {
 		c.PostForm("contact"),
 		c.PostForm("notes"),
 	}
-	records[NewID] = NewRecord
+	conf.records[NewID] = NewRecord
 	// Save new requests to file.
-	records.SaveToCSV("data/samplingSummary.tab")
+	conf.records.SaveToCSV("data/samplingSummary.csv")
 
-	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": records})
+	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": conf.records})
 }
 
 func SampleRequest(c *gin.Context) {
