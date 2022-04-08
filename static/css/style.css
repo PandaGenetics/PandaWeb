@@ -88,3 +88,8 @@ header .navbar-nav li.dropdown > a, header .navbar-nav li.nav-item > a {
 .container-fluid{
     background-color: RGB(245,245,245);
 }
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
