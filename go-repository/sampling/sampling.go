@@ -3,6 +3,7 @@ package sampling
 import (
 	"encoding/csv"
 	"fmt"
+	"github.com/PandaGenetics/PandaWeb/go-repository/PandaIndividual"
 	"github.com/gin-gonic/gin"
 	"io"
 	"log"
@@ -148,5 +149,6 @@ func SampleAppend(c *gin.Context) {
 }
 
 func SampleRequest(c *gin.Context) {
-	c.HTML(http.StatusOK, "samplingRequest.html", gin.H{})
+	Pandas := PandaIndividual.NewConfig()
+	c.HTML(http.StatusOK, "samplingRequest.html", gin.H{"pandas": Pandas.Population})
 }

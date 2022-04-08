@@ -1,7 +1,12 @@
 package PandaIndividual
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestString(t *testing.T) {
-	String()
+	var PP = NewPandaPopulation("../../data/2020-Living-Pedigree.csv")
+
+	fmt.Println(PP)
 }

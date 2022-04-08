@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="add Config function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/samplingSummary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/samplingSummary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/2020-Living-Pedigree.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/2020-Living-Pedigree.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/PandaIndividual/PandaIndividual.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/PandaIndividual/PandaIndividual.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/PandaIndividual/PandaIndividual_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/PandaIndividual/PandaIndividual_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/sampling/sampling.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/sampling/sampling.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingSummary.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingSummary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

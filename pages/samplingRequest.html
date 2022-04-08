@@ -84,6 +84,11 @@
               <div class="col-75">
                   <input type="text" id="panda_name" name="panda_name" placeholder="Panda Name">
               </div>
+              <div name="pandas">
+                  {{ range .pandas}}
+                    <a id="{{ .PID }}">{{ .ChineseName }}</a>
+                  {{ end }}
+              </div>
           </div>
 
           <div class="row">
