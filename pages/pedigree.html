@@ -6,10 +6,12 @@
 </head>
 <body>
     {{template "navigation" .}}
-    <div class="container-fliud">
-        <iframe src="https://pandagenetics.shinyapps.io/panda_pedigree/" id="iframe" name="content" width="100%" height="850px" frameborder="0"></iframe>
+    <div class="content">
+        <div class="container-fliud">
+            <iframe src="https://pandagenetics.shinyapps.io/panda_pedigree/" id="iframe" name="content" width="100%" height="650px" frameborder="0"></iframe>
+        </div>
     </div>
-
+    {{template "footer" .}}
 </body>
 
 <script type="text/javascript">
@@ -19,7 +21,6 @@
         document.getElementById("iframe").height=document.getElementById("iframe").contentWindow.document.body.scrollHeight;
     }
 </script>
-
 
 </html>
 
