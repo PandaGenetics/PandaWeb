@@ -21,8 +21,6 @@
 <div class="container browser-row well">
     <div class="row">
 
-
-
         <div class="col-lg-4 col-lg-offset-1 col-md-4 col-sm-12">
             <h3>
                 "reference strain"
@@ -116,68 +114,70 @@
 
 </div>
 
-<div class="container">
-<!-- igv功能模块 -->
-<div class="col-lg-12 col-md-10">
-    <div id="igv-div"></div>
-    <script type="text/javascript">
-        //import igv from "https://cdn.jsdelivr.net/npm/igv@2.10.4/dist/igv.esm.min.js";
-        var igvDiv = document.getElementById("igv-div");
-        const options = {
-                reference: {
-                    "id": "Panda",
-                    "name": "Panda 2021",
-                    "fastaURL": "{{ .root}}/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa",
-                    "indexURL": "{{ .root}}/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa.fai",
-                    // "tracks": [
-                    //     {
-                    //         type: "alignment",
-                    //         format: "bam",
-                    //         name: "NA12889",
-                    //         url: "gs://genomics-public-data/platinum-genomes/bam/NA12878_S1.bam",
-                    //         indexURL: "gs://genomics-public-data/platinum-genomes/bam/NA12878_S1.bam.bai",
-                    //         sort: {
-                    //             chr: "chr1",
-                    //             position: 155155358,
-                    //             option: "BASE",
-                    //             direction: "ASC"
-                    //         },
-                    //     },
-                    // ]
-                },
-                "locus": "2:24,949,203-24,963,009",
-            };
+<div class="igv">
+    <div class="container">
+        <!-- igv功能模块 -->
+            <div class="col-lg-12 col-md-10">
+                <div id="igv-div"></div>
+                <script type="text/javascript">
+                    //import igv from "https://cdn.jsdelivr.net/npm/igv@2.10.4/dist/igv.esm.min.js";
+                    var igvDiv = document.getElementById("igv-div");
+                    const options = {
+                            reference: {
+                                "id": "Panda",
+                                "name": "Panda 2021",
+                                "fastaURL": "{{ .root}}/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa",
+                                "indexURL": "{{ .root}}/Ailuropoda_melanoleuca.ASM200744v2.dna_sm.primary_assembly.all.fa.fai",
+                                "tracks": [
+                                    {
+                                        type: "alignment",
+                                        format: "bam",
+                                        name: "NA12889",
+                                        url: "gs://genomics-public-data/platinum-genomes/bam/NA12878_S1.bam",
+                                        indexURL: "gs://genomics-public-data/platinum-genomes/bam/NA12878_S1.bam.bai",
+                                        sort: {
+                                            chr: "chr1",
+                                            position: 155155358,
+                                            option: "BASE",
+                                            direction: "ASC"
+                                        },
+                                    },
+                                ]
+                            },
+                            "locus": "2:24,949,203-24,963,009",
+                        };
 
 
-        document.addEventListener("DOMContentLoaded", function() {
-            igv.createBrowser(igvDiv, options)
-                .then( (browser) => {igv.browser = browser} );
-        });
+                    document.addEventListener("DOMContentLoaded", function() {
+                        igv.createBrowser(igvDiv, options)
+                            .then( (browser) => {igv.browser = browser} );
+                    });
 
-        function LoadTrack(n) {
-             i = {
-                type: 'wig',
-                format: 'bigwig',
-                url: 'https://s3.amazonaws.com/igv.broadinstitute.org/data/hg19/encode/wgEncodeBroadHistoneGm12878H3k4me3StdSig.bigWig',
-                name: n
-            };
-            console.log(i);
-            console.log(igv.browser);
-            console.log(igv);
-            igv.browser.loadTrack(i);
+                    function LoadTrack(n) {
+                        i = {
+                            type: 'wig',
+                            format: 'bigwig',
+                            url: 'https://s3.amazonaws.com/igv.broadinstitute.org/data/hg19/encode/wgEncodeBroadHistoneGm12878H3k4me3StdSig.bigWig',
+                            name: n
+                        };
+                        console.log(i);
+                        console.log(igv.browser);
+                        console.log(igv);
+                        igv.browser.loadTrack(i);
 
-                // .then( (newTrack) => alert("Track loaded: " + newTrack.name) )
-                // .catch( (error) => console.log("A error happened") )
-        }
+                            // .then( (newTrack) => alert("Track loaded: " + newTrack.name) )
+                            // .catch( (error) => console.log("A error happened") )
+                    }
 
-        document.getElementById("FDSW202100238-1r.bam").onclick = LoadTrack("FDSW202100238-1r.bam");
+                    document.getElementById("FDSW202100238-1r.bam").onclick = LoadTrack("FDSW202100238-1r.bam");
 
-    </script>
-  </div>
+                </script>
+            </div>
+        </div>
+    </div>
 </div>
 
-  {{template "footer" .}}
-</div>
+{{template "footer" .}}
 
 </body>
 </html>

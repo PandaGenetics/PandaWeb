@@ -1,95 +1,21 @@
-.label {
-    width: 80px;
-    height: 18px;
-    line-height: 12px;
-    margin-bottom: 4px;
-    display: inline-block;
+html{
+    height: 100%;
 }
 
-.gt-3 {
-    background-color: white;
-    border: 1px dotted black;
-    color: black;
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    flex: 1;
 }
 
-.gt-0.PASS {
-    background-color: rgba(194,194,214,1.0);
-    border: 1px solid black;
-    color: black;
+body{
+    padding-bottom: 0px;
+    margin: 0px;
 }
 
-.gt-2.PASS {
-    background-color: rgba(0, 102, 255,1.0);
-    border: 1px solid black;
-    color: white;
-}
-
-.gt-0:not(.PASS) {
-    background-color: rgba(194,194,214,0.25);
-    border: 1px dotted black;
-    color: black;
-}
-
-.gt-2:not(.PASS) {
-    background-color: rgba(0, 102, 255,0.25);
-    border: 1px dotted black;
-    color: black;
-}
-
-.het {
-    background-color: #ffff00;
-    color: black;
-}
-
-.gt_set {
-    border-right: 1px dotted #b3b3b3;
-}
-
-th {
-    white-space: nowrap;
-}
-
-#variants {
-    font-size: 1.0rem;
-}
-
-.cendr-brand-txt {
-    font-size: 4.0rem;
-    color: white;
-}
-
-.cendr-brand-txt a{
-    text-decoration: none;
-    color: white;
-    font-size: 100%;
-}
-
-
-.cendr-brand-row {
-    background-color: #561F8C !important;
-    padding:1.0rem;
-}
-
-.breadcrumb {
-    padding: 20px 25px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-
-header .navbar-nav li.dropdown > a, header .navbar-nav li.nav-item > a {
-    color: #46186F;
-    font-size: 1.1em;
-}
-
-#bs-example-navbar-collapse-1{
-    background-color: #f5f5f5;
-}
-
-.container-fluid{
-    background-color: RGB(245,245,245);
-}
-
-html, body{
-    padding: 0;
-    margin: 0;
+.igv{
+    padding-bottom: 40px;
 }
