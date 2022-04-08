@@ -82,13 +82,17 @@
                   <label for="panda_name">采血个体（大熊猫姓名）</label>
               </div>
               <div class="col-75">
-                  <input type="text" id="panda_name" name="panda_name" placeholder="Panda Name">
+                  <input type="text" id="panda_name" readonly required>
+                  <input type="hidden" id="PID">
+                  <input type="text" id="search" onkeyup="myFunction()" name="panda_name" placeholder="Panda Name">
               </div>
-              <div name="pandas">
-                  {{ range .pandas}}
-                    <a id="{{ .PID }}">{{ .ChineseName }}</a>
+              <ul id="pandas">
+                  {{ range .pandas }}
+                    <li name="panda" id="{{ .PID }}" style="display: none" onclick="addValue({{ .PID }})">
+                        <a href="#">{{ .ChineseName }}</a>
+                    </li>
                   {{ end }}
-              </div>
+              </ul>
           </div>
 
           <div class="row">
@@ -119,7 +123,7 @@
                   <label for="purpose">血样用途</label>
               </div>
               <div class="col-75">
-                  <input type="text" id="purpose" name="purpose" placeholder="">
+                  <input type="text" id="purpose" name="purpose" placeholder="" required>
               </div>
           </div>
           <div class="row">
@@ -127,7 +131,7 @@
                   <label for="project">项目</label>
               </div>
               <div class="col-75">
-                  <input type="text" id="project" name="project" placeholder="">
+                  <input type="text" id="project" name="project" placeholder="" required>
               </div>
           </div>
           <div class="row">
@@ -143,7 +147,7 @@
                   <label for="project_manager">项目负责人</label>
               </div>
               <div class="col-75">
-                  <input type="text" id="project_manager" name="project_manager" placeholder="">
+                  <input type="text" id="project_manager" name="project_manager" placeholder="" required>
               </div>
           </div>
           <div class="row">
@@ -151,7 +155,7 @@
                   <label for="contact">联系人</label>
               </div>
               <div class="col-75">
-                  <input type="text" id="contact" name="contact" placeholder="">
+                  <input type="text" id="contact" name="contact" placeholder="" required>
               </div>
           </div>
           <div class="row">
@@ -170,5 +174,47 @@
   </div>
 
   {{ template "footer" . }}
+
+  <script>
+      function myFunction() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("search");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("pandas");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.innerText;
+              console.log(a.textContent, a.innerText)
+
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                  console.log(filter+"。。。。。1");
+                  console.log(txtValue.toUpperCase().indexOf(filter));
+              } else if (filter == "" || filter == undefined ) {
+                  li[i].style.display = "none";
+                  console.log(filter+"。。。。。2");
+              } else {
+                  li[i].style.display = "none";
+                  console.log(filter+"。。。。。3");
+              }
+          }
+      }
+
+      let choosedPID = [];
+      let choosedPanda = [];
+
+      function addValue(id) {
+          var li = document.getElementById(id);
+          let a = li.getElementsByTagName("a")[0];
+          choosedPID.push(id);
+          choosedPanda.push(a.innerText+"大道");
+          let input = document.getElementById("panda_name").innerText
+
+          input.value = choosedPanda;
+          console.log(choosedPID);
+          console.log(choosedPanda);
+      }
+  </script>
 </body>
 </html>
