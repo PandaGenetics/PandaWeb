@@ -83,16 +83,17 @@
               </div>
               <div class="col-75">
                   <input type="text" id="panda_name" readonly required>
-                  <input type="hidden" id="PID">
+                  <input type="hidden" id="PID" name="PID">    <!-- server receives value-->
                   <input type="text" id="search" onkeyup="myFunction()" name="panda_name" placeholder="Panda Name">
+                  <!-- hidden list-->
+                  <ul id="pandas">
+                      {{ range .pandas }}
+                      <li name="panda" id="{{ .PID }}" style="display: none" onclick="addValue({{ .PID }})">
+                          <a href="#">{{ .ChineseName }}</a>
+                      </li>
+                      {{ end }}
+                  </ul>
               </div>
-              <ul id="pandas">
-                  {{ range .pandas }}
-                    <li name="panda" id="{{ .PID }}" style="display: none" onclick="addValue({{ .PID }})">
-                        <a href="#">{{ .ChineseName }}</a>
-                    </li>
-                  {{ end }}
-              </ul>
           </div>
 
           <div class="row">
@@ -207,13 +208,15 @@
       function addValue(id) {
           var li = document.getElementById(id);
           let a = li.getElementsByTagName("a")[0];
-          choosedPID.push(id);
-          choosedPanda.push(a.innerText+"大道");
-          let input = document.getElementById("panda_name").innerText
-
-          input.value = choosedPanda;
-          console.log(choosedPID);
-          console.log(choosedPanda);
+          if (choosedPID.includes(id) ){
+              alert(a.innerText + " has existed");
+          } else {
+              choosedPID.push(id);
+              choosedPanda.push(a.innerText);
+              let input = document.getElementById("panda_name");
+              input.value = choosedPanda.join("\t");
+              document.getElementById("PID").value = choosedPID.join(",");
+          }
       }
   </script>
 </body>

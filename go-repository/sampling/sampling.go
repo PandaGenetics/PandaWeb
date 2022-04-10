@@ -14,7 +14,7 @@ import (
 
 // Sampling records a list of information for requesting panda sample.
 type Sampling struct {
-	ID                    string `json:"id"`
+	PID                   string `json:"id"` // pedigree_id
 	PandaName             string `json:"panda_name"`
 	RequestForCoagulation string `json:"request_for_coagulation"` // Coagulation
 	RequestForHeparin     string `json:"request_for_heparin"`     // Anti-coagulation sodium heparin 肝素钠
@@ -29,7 +29,7 @@ type Sampling struct {
 }
 
 func (s *Sampling) String() string {
-	return fmt.Sprintf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", s.ID, s.PandaName, s.RequestForCoagulation,
+	return fmt.Sprintf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", s.PID, s.PandaName, s.RequestForCoagulation,
 		s.RequestForHeparin, s.RequestForEDTA, s.RequestForOther, s.Purpose, s.Project, s.IACUC, s.ProjectManager,
 		s.Contact, s.Notes)
 }
@@ -78,7 +78,7 @@ func (sr *SamplingRecords) SaveToCSV(path string) error {
 	defer f.Close()
 	w := csv.NewWriter(f)
 	for _, item := range *sr {
-		err := w.Write([]string{item.ID, item.PandaName, // write record to file in line-by-line
+		err := w.Write([]string{item.PID, item.PandaName, // write record to file in line-by-line
 			item.RequestForCoagulation, item.RequestForHeparin,
 			item.RequestForEDTA, item.RequestForOther,
 			item.Purpose,
@@ -126,22 +126,27 @@ func SampleDelete(c *gin.Context) {
 
 func SampleAppend(c *gin.Context) {
 	conf := NewConfig()
-	NewID := fmt.Sprintf("%d", len(conf.records)+1)
-	NewRecord := Sampling{
-		NewID,
-		c.PostForm("panda_name"),
-		c.PostForm("request_for_coagulation"),
-		c.PostForm("request_for_heparin"),
-		c.PostForm("request_for_edta"),
-		c.PostForm("request_for_other"),
-		c.PostForm("purpose"),
-		c.PostForm("project"),
-		c.PostForm("iacuc"),
-		c.PostForm("project_manager"),
-		c.PostForm("contact"),
-		c.PostForm("notes"),
+	formPIDValue := c.PostForm("PID")
+	pandas := strings.Split(formPIDValue, ",")
+	fmt.Println(formPIDValue, pandas)
+	for _, panda := range pandas {
+		NewRecord := Sampling{
+			panda,
+			c.PostForm("panda_name"),
+			c.PostForm("request_for_coagulation"),
+			c.PostForm("request_for_heparin"),
+			c.PostForm("request_for_edta"),
+			c.PostForm("request_for_other"),
+			c.PostForm("purpose"),
+			c.PostForm("project"),
+			c.PostForm("iacuc"),
+			c.PostForm("project_manager"),
+			c.PostForm("contact"),
+			c.PostForm("notes"),
+		}
+		conf.records[panda] = NewRecord
 	}
-	conf.records[NewID] = NewRecord
+
 	// Save new requests to file.
 	conf.records.SaveToCSV("data/samplingSummary.csv")
 

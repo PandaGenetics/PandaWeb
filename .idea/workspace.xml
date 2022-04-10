@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="modify sampling request page">
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/samplingSummary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/samplingSummary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/sampling/sampling.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/sampling/sampling.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingSummary.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingSummary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +33,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -119,7 +122,9 @@
     <MESSAGE value="not important" />
     <MESSAGE value="add Config function" />
     <MESSAGE value="modify sampling request page" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify sampling request page" />
+    <MESSAGE value="modify panda search in sampling request page" />
+    <MESSAGE value="delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

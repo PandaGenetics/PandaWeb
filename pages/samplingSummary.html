@@ -31,7 +31,7 @@
                 <tbody>
                     {{ range .records}}
                         <tr>
-                            <th scope="row">{{ .ID }}</th>
+                            <th scope="row">{{ .PID }}</th>
                             <td>{{ .PandaName }}</td>
                             <td>{{ .RequestForCoagulation }}</td>
                             <td>{{ .RequestForHeparin }}</td>
@@ -43,7 +43,7 @@
                             <td>{{ .ProjectManager }}</td>
                             <td>{{ .Contact }}</td>
                             <td>{{ .Notes }}</td>
-                            <td><input type="checkbox" name="delete" value="{{ .ID }}"></td>
+                            <td><input type="checkbox" name="delete" value="{{ .PID }}"></td>
                         </tr>
                     {{end}}
 
