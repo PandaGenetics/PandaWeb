@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="add Config function">
       <change afterPath="$PROJECT_DIR$/data/data.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/go-repository/utility/csvToJson.go" afterDir="false" />
@@ -16,6 +17,11 @@
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/geneBrowser@v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geneBrowser@v3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/homePage.html" afterDir="false" />
+=======
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="modify sampling request page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
+>>>>>>> ff3bd3022688364161a1a1b9628c979f4324cfd3
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +158,8 @@
     <MESSAGE value="add Panda Individual" />
     <MESSAGE value="not important" />
     <MESSAGE value="add Config function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Config function" />
+    <MESSAGE value="modify sampling request page" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify sampling request page" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
