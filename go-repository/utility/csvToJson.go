@@ -16,6 +16,7 @@ type BamFormat struct {
 	Position  string `json:"position"`
 	Option    string `json:"option"`
 	Direction string `json:"direction"`
+	Url       string `json:"url"`
 }
 
 // createBamList is used for convert csv file to json file
@@ -41,6 +42,8 @@ func createBamList(data [][]string) []BamFormat {
 					record.Option = field
 				case j == 6:
 					record.Direction = field
+				case j == 7:
+					record.Url = field
 				}
 			}
 			bamList = append(bamList, record)
