@@ -37,5 +37,5 @@ func main() {
 	router.GET("/samplingrequest", sampling.SampleRequest)
 	router.POST("/samplingrequest", sampling.SampleAppend)
 
-	router.Run(":8080")
+	router.Run(":8081")
 }
