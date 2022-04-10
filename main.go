@@ -3,14 +3,11 @@ package main
 import (
 	"github.com/PandaGenetics/PandaWeb/go-repository/genomeBrowser"
 	"github.com/PandaGenetics/PandaWeb/go-repository/sampling"
-	"github.com/PandaGenetics/PandaWeb/go-repository/utility"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 func main() {
-
-	utility.OpenCSV()
 
 	router := gin.Default()
 
