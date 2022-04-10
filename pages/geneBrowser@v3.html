@@ -103,19 +103,19 @@
                         "indexURL":"http://192.168.38.70:8081/gene/v3/genome/asm.cleaned.fasta.assembly.assembly.FINAL.fasta.fai",
                         "aliasURL":"http://192.168.38.70:8081/gene/v3/genome/aliasForChromsomes.tab",
                         "tracks":[
-                            // {{ range .tracks}}
-                            //     {
-                            //         type: "{{ .TrackType}}",
-                            //         format: "{{.Format}}",
-                            //         name: "{{.Name}}",
-                            //         url: "{{.Url}}",
-                            //         indexURL:"{{.IndexURL}}",
-                            //         visibilityWindow:"{{printf "%d" .VisibilityWindow}}",
-                            //     },
-                            // {{end}}
-                    //     ],
-                    // },
-                    // "locus":"Hic_asm_2:24,849,203-24,963,009",
+                            {{ range .tracks}}
+                                {
+                                    type: "{{ .TrackType}}",
+                                    format: "{{.Format}}",
+                                    name: "{{.Name}}",
+                                    url: "{{.Url}}",
+                                    indexURL:"{{.IndexURL}}",
+                                    visibilityWindow:"{{printf "%d" .VisibilityWindow}}",
+                                },
+                            {{end}}
+                        ],
+                    },
+                    "locus":"Hic_asm_2:24,849,203-24,963,009",
                 };
 
             igv.createBrowser(igvDiv, options)
