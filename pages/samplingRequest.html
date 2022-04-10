@@ -188,7 +188,7 @@
               txtValue = a.innerText;
               console.log(a.textContent, a.innerText)
 
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != "") {
                   li[i].style.display = "";
                   console.log(filter+"。。。。。1");
                   console.log(txtValue.toUpperCase().indexOf(filter));
