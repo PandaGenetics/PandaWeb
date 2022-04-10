@@ -3,17 +3,20 @@ package main
 import (
 	"github.com/PandaGenetics/PandaWeb/go-repository/genomeBrowser"
 	"github.com/PandaGenetics/PandaWeb/go-repository/sampling"
+	"github.com/PandaGenetics/PandaWeb/go-repository/utility"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 func main() {
+
+	utility.OpenCSV()
+
 	router := gin.Default()
 
 	router.LoadHTMLGlob("pages/*")
 
 	router.Static("/static", "static/")
-
 	router.Static("/img", "images")
 	router.Static("/gene", "data")
 
@@ -34,5 +37,5 @@ func main() {
 	router.GET("/samplingrequest", sampling.SampleRequest)
 	router.POST("/samplingrequest", sampling.SampleAppend)
 
-	router.Run(":8081")
+	router.Run(":8080")
 }

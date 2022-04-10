@@ -2,11 +2,12 @@ package genomeBrowser
 
 import (
 	"bufio"
-	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 const igvRoot = "http://192.168.38.70:8081/gene/v3"
@@ -100,7 +101,7 @@ var RNApi = track{
 //var igvTracks = gin.H{"mRNA": mRNA, "gap": gap, "BAC": BAC}
 
 func PandaGenomeV2(c *gin.Context) {
-	c.HTML(http.StatusOK, "geneBrowser@v2.html", gin.H{"tracks": LoadBam("data/Bam_Filename.csv"),
+	c.HTML(http.StatusOK, "geneBrowser@v2.html", gin.H{"tracks": LoadBam("data/bam_Filename.csv"),
 		"root": "http://192.168.38.70:8081/gene"})
 }
 
