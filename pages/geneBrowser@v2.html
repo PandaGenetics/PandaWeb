@@ -36,38 +36,19 @@
                             <td>001</td>
                             <td>
                                 <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="001_VCF">VCF
+                                    <input type='checkbox' class='track-select isotype-item sample-track' value='001_VCF'>VCF
                                 </label>
                             </td>
                             <td>
                                 <label>
                                     <input type="checkbox" class="track-select isotype-item sample-track" value="001_bam">BAM
                                 </label>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="002_VCF">VCF
-                                </label>
                             </td>
-                            <td>
-                                <label>
-                                    <input type="checkbox" class="track-select isotype-item sample-track" value="002_bam">BAM
-                                </label>
-                            </td> 
                         </tr>
+                        <div id="DataList" onload="addData()"></div>
                     </tbody> 
                 </table>
 
-                <ul>
-                    {{ range $key, $value := .tracks}}
-                        <li>
-                            <a href="#" ID="{{$key}}" >{{ $key }}</a>
-                        </li>
-                    {{end}}
-                </ul>
             </div> 
         </div>
 
@@ -178,6 +159,5 @@
 </div>
 
 {{template "footer" .}}
-
 </body>
 </html>
