@@ -83,14 +83,14 @@
               </div>
               <div class="col-75">
                   <input type="text" id="panda_name" readonly required>
-                  <input type="hidden" id="PID" name="PID">    <!-- server receives value-->
+                  <input type="hidden" id="PID" name="PID" >    <!-- server receives value-->
                   <input type="text" id="search" onkeyup="myFunction()" name="panda_name" placeholder="Panda Name">
                   <!-- hidden list-->
                   <ul id="pandas">
                       {{ range .pandas }}
-                      <li name="panda" id="{{ .PID }}" style="display: none" onclick="addValue({{ .PID }})">
-                          <a href="#">{{ .ChineseName }}</a>
-                      </li>
+                          <li name="panda" id="{{ .PID }}" style="display: none" onclick="addValue({{ .PID }})">
+                              <a href="#">{{ .ChineseName }}</a>
+                          </li>
                       {{ end }}
                   </ul>
               </div>

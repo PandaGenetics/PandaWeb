@@ -33,6 +33,7 @@
             </form>
             <div style="height:230px; overflow:scroll;">
                 <table id="browser_strain_list" class="table table-striped table-hover table-condensed">    
+<<<<<<< HEAD
                     <tbody class="searchable" id="genetic" style="overflow: scroll" onload="setDiv()">
 <!--                        <tr>-->
 <!--                            <td>001</td>-->
@@ -47,6 +48,28 @@
 <!--                                </label>-->
 <!--                            </td>-->
 <!--                        </tr>-->
+=======
+                    <tbody class="searchable" style="overflow: scroll;">
+                        <tr>
+                            <td>001</td>
+                            <td>
+                                <label>
+                                    <input type='checkbox' class='track-select isotype-item sample-track' value='001_VCF'>VCF
+                                </label>
+                            </td>
+                            <td>
+                                <label>
+                                    <input type="checkbox" class="track-select isotype-item sample-track" value="001_bam">BAM
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="content btn-danger" onclick="setDiv()">click me</div>
+                            </td>
+                        </tr>
+
+>>>>>>> 5e1647a99f6965831aeccc5bc057d9fb85a53580
                     </tbody> 
                 </table>
 
@@ -145,13 +168,14 @@
                         console.log(i);
                         console.log(igv.browser);
                         console.log(igv);
-                        igv.browser.loadTrack(i);
+                        // dont fix
+                        //igv.browser.loadTrack(i);
 
                             // .then( (newTrack) => alert("Track loaded: " + newTrack.name) )
                             // .catch( (error) => console.log("A error happened") )
                     }
 
-                    document.getElementById("FDSW202100238-1r.bam").onclick = LoadTrack("FDSW202100238-1r.bam");
+                    //document.getElementById("FDSW202100238-1r.bam").onclick = LoadTrack("FDSW202100238-1r.bam");
 
                 </script>
 
