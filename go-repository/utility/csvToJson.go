@@ -3,7 +3,6 @@ package utility
 import (
 	"encoding/csv"
 	"encoding/json"
-	"fmt"
 	"log"
 	"os"
 )
@@ -85,5 +84,4 @@ func OpenCSV() {
 	}
 
 	_, err = f2.Write(jsonData)
-	fmt.Println(string(jsonData))
 }
