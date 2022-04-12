@@ -45,7 +45,12 @@
                                 </label>
                             </td>
                         </tr>
-                        <div class="content" onload="setDiv()"></div>
+                        <tr>
+                            <td>
+                                <div class="content btn-danger" onclick="setDiv()">click me</div>
+                            </td>
+                        </tr>
+
                     </tbody> 
                 </table>
 
@@ -144,13 +149,14 @@
                         console.log(i);
                         console.log(igv.browser);
                         console.log(igv);
-                        igv.browser.loadTrack(i);
+                        // dont fix
+                        //igv.browser.loadTrack(i);
 
                             // .then( (newTrack) => alert("Track loaded: " + newTrack.name) )
                             // .catch( (error) => console.log("A error happened") )
                     }
 
-                    document.getElementById("FDSW202100238-1r.bam").onclick = LoadTrack("FDSW202100238-1r.bam");
+                    //document.getElementById("FDSW202100238-1r.bam").onclick = LoadTrack("FDSW202100238-1r.bam");
 
                 </script>
             </div>
