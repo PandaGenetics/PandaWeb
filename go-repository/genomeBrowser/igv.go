@@ -10,7 +10,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const igvRoot = "http://192.168.38.70:8081/gene/v3"
+const igvRootV3 = "http://192.168.38.70:8081/gene/v3"
+const igvRootV2 = "http://192.168.38.70:8081/gene/v2"
 
 type track struct {
 	TrackType        string `json:"type"`
@@ -64,44 +65,44 @@ var mRNA = track{
 	"annotation",
 	"gff3",
 	"mRNA",
-	igvRoot + "/annotation/pasa2.longest.filter_sorted.gff3.gz",
-	igvRoot + "/annotation/pasa2.longest.filter_sorted.gff3.gz.tbi",
+	igvRootV3 + "/annotation/pasa2.longest.filter_sorted.gff3.gz",
+	igvRootV3 + "/annotation/pasa2.longest.filter_sorted.gff3.gz.tbi",
 	500 * 100 * 100}
 var mRNAwithFunc = track{
 	"annotation",
 	"gff3",
 	"mRNAwithFunc",
-	igvRoot + "/annotation/pasa2.longest.filter.gff3.addNRfunc_sorted.gff3.gz",
-	igvRoot + "/annotation/pasa2.longest.filter.gff3.addNRfunc_sorted.gff3.gz.tbi",
+	igvRootV3 + "/annotation/pasa2.longest.filter.gff3.addNRfunc_sorted.gff3.gz",
+	igvRootV3 + "/annotation/pasa2.longest.filter.gff3.addNRfunc_sorted.gff3.gz.tbi",
 	500 * 100 * 100}
 var gap = track{
 	"annotation",
 	"bed",
 	"GAP",
-	igvRoot + "/annotation/panda_gap.bed.gz",
-	igvRoot + "/annotation/panda_gap.bed.gz.tbi",
+	igvRootV3 + "/annotation/panda_gap.bed.gz",
+	igvRootV3 + "/annotation/panda_gap.bed.gz.tbi",
 	1000 * 100 * 100 * 100}
 var BAC = track{
 	"annotation",
 	"bed",
 	"BAColder",
-	igvRoot + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz",
-	igvRoot + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz.tbi",
+	igvRootV3 + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz",
+	igvRootV3 + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz.tbi",
 	1000000}
 
 var BAClatest = track{
 	"annotation",
 	"gff3",
 	"BAClatest",
-	igvRoot + "/BAC/current_sorted.gff3.gz",
-	igvRoot + "/BAC/current_sorted.gff3.gz.tbi",
+	igvRootV3 + "/BAC/current_sorted.gff3.gz",
+	igvRootV3 + "/BAC/current_sorted.gff3.gz.tbi",
 	100000000}
 var RNApi = track{
 	"alignment",
 	"bam",
 	"脾脏",
-	igvRoot + "/RNAseq/pi_sorted.bam",
-	igvRoot + "/RNAseq/pi_sorted.bam.bai",
+	igvRootV3 + "/RNAseq/pi_sorted.bam",
+	igvRootV3 + "/RNAseq/pi_sorted.bam.bai",
 	10000,
 }
 
