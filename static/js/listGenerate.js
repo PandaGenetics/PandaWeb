@@ -21,17 +21,23 @@ $(function(){
                         "</tr>"
                 }
             }
-           return($("#genetic").html(targetHTML));
+           $("#genetic").html(targetHTML);
+            const element = document.getElementsByClassName("track-select")
+            for(let i=0;i<element.length;i++) {
+                element[i].addEventListener("click", function () {
+                    alert("haha")
+                    igv.browser.loadTrack(
+                        {
+                            type: 'alignment',
+                            format: 'bam',
+                            url:'https://1000genomes.s3.amazonaws.com/phase3/data/HG02450/alignment/HG02450.mapped.ILLUMINA.bwa.ACB.low_coverage.20120522.bam',
+                            indexURL:'https://1000genomes.s3.amazonaws.com/phase3/data/HG02450/alignment/HG02450.mapped.ILLUMINA.bwa.ACB.low_coverage.20120522.bam.bai',
+                            name: 'HG02450'
+                        })
+                })
+            }
         }
     })
-
-    window.onload = function(){
-        const element = document.getElementsByClassName("track-select")
-        for(let i=0;i<element.length;i++)
-            element[i].addEventListener("click",function (){
-                alert("haha")
-            })
-    }
 })
 
 

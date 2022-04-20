@@ -45,7 +45,7 @@
             <h3>Tracks</h3>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" checked class="track-select normal-track" value="Genes">Genes
+                    <input type="checkbox" class="track-select normal-track" value="Genes">Genes
                 </label>
             </div>
             <div class="checkbox">
@@ -97,17 +97,11 @@
                     // "locus": "2:24,949,203-24,963,009",
                     };
 
-                let browser = igv.createBrowser(igvDiv, options)
-                    .then(function(browser) {
-                          // Bind browser events
-                        browser.on('trackdragend', function(reference_frame, label) {
-                        });
-                        // Detect track changes
-                        $(".track-select").on("change", function() {
-                            reload_tracks();
-                        });
-
-                    });
+                    igv.createBrowser(igvDiv, options)
+                        .then(function (browser) {
+                            igv.browser = browser;
+                            console.log("Created IGV browser");
+                        })
                 })
             </script>
 
