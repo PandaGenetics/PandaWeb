@@ -61,17 +61,17 @@ func LoadBam(path string) map[string]TrackBam {
 	return bamTracks
 }
 
+//var mRNA = track{
+//	"annotation",
+//	"gff3",
+//	"mRNA",
+//	igvRootV3 + "/annotation/pasa2.longest.filter_sorted.gff3.gz",
+//	igvRootV3 + "/annotation/pasa2.longest.filter_sorted.gff3.gz.tbi",
+//	500 * 100 * 100}
 var mRNA = track{
 	"annotation",
 	"gff3",
 	"mRNA",
-	igvRootV3 + "/annotation/pasa2.longest.filter_sorted.gff3.gz",
-	igvRootV3 + "/annotation/pasa2.longest.filter_sorted.gff3.gz.tbi",
-	500 * 100 * 100}
-var mRNAwithFunc = track{
-	"annotation",
-	"gff3",
-	"mRNAwithFunc",
 	igvRootV3 + "/annotation/pasa2.longest.filter.gff3.addNRfunc_sorted.gff3.gz",
 	igvRootV3 + "/annotation/pasa2.longest.filter.gff3.addNRfunc_sorted.gff3.gz.tbi",
 	500 * 100 * 100}
@@ -82,27 +82,37 @@ var gap = track{
 	igvRootV3 + "/annotation/panda_gap.bed.gz",
 	igvRootV3 + "/annotation/panda_gap.bed.gz.tbi",
 	1000 * 100 * 100 * 100}
-var BAC = track{
-	"annotation",
-	"bed",
-	"BAColder",
-	igvRootV3 + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz",
-	igvRootV3 + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz.tbi",
-	1000000}
+
+//var BAC = track{
+//	"annotation",
+//	"bed",
+//	"BAColder",
+//	igvRootV3 + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz",
+//	igvRootV3 + "/BAC/GiantPanda_SP01-BAC_location_sorted.bed.gz.tbi",
+//	1000000}
 
 var BAClatest = track{
 	"annotation",
-	"gff3",
+	"bed",
 	"BAClatest",
-	igvRootV3 + "/BAC/current_sorted.gff3.gz",
-	igvRootV3 + "/BAC/current_sorted.gff3.gz.tbi",
+	igvRootV3 + "/BAC/giantPandaBAC_SP01-SP08_sorted.bed.gz",
+	igvRootV3 + "/BAC/giantPandaBAC_SP01-SP08_sorted.bed.gz.tbi",
 	100000000}
 var RNApi = track{
 	"alignment",
 	"bam",
-	"脾脏",
+	"脾脏表达谱",
 	igvRootV3 + "/RNAseq/pi_sorted.bam",
 	igvRootV3 + "/RNAseq/pi_sorted.bam.bai",
+	10000,
+}
+
+var Microhaps = track{
+	"alignment",
+	"bam",
+	"Microhaps",
+	igvRootV3 + "/resequencing/microHaplotype-Range-20220415_sorted.bam",
+	igvRootV3 + "/resequencing/microHaplotype-Range-20220415_sorted.bam.bai",
 	10000,
 }
 
@@ -114,5 +124,5 @@ func PandaGenomeV2(c *gin.Context) {
 }
 
 func PandaGenomeV3(c *gin.Context) {
-	c.HTML(http.StatusOK, "geneBrowser@v3.html", gin.H{"tracks": []track{mRNA, mRNAwithFunc, gap, BAC, BAClatest, RNApi}}) // binds data
+	c.HTML(http.StatusOK, "geneBrowser@v3.html", gin.H{"tracks": []track{mRNA, gap, BAClatest, RNApi, Microhaps}}) // binds data
 }
