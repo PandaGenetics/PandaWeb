@@ -37,7 +37,7 @@ func main() {
 	router.POST("/samplingrequest", sampling.SampleAppend)
 
 	router.GET("/people", lab.People)
-	//router.GET("/public",lab.publication)
+	router.GET("/public", lab.Public)
 
 	router.Run(":8081")
 }
