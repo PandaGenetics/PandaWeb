@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="Changes">
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="modify sampling request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/pages/geneBrowser@v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geneBrowser@v2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header.tmpl.html" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/data/samplingSummary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/samplingSummary.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/geneBrowser@v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geneBrowser@v2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
->>>>>>> 5e1647a99f6965831aeccc5bc057d9fb85a53580
-      <change beforePath="$PROJECT_DIR$/static/js/listGenerate.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/listGenerate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/geneBrowser@v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geneBrowser@v3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,25 +91,6 @@
       <recent name="$PROJECT_DIR$/go-repository/genomeBrowser" />
       <recent name="$PROJECT_DIR$/go-repository" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="pandagr" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="pandagr" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
