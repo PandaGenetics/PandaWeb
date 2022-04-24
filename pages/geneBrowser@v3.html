@@ -82,49 +82,62 @@
             <div class="col-lg-3 col-md-6" role="complementary">
                 <section id="block-block-5" class="block block-block clearfix">
                     <h3 class="block-title" style="text-align: center;">Genetic Summary</h3>
-                    <table class="datasum" style="margin: auto;" ><tr><th>Type</th><th style="text-align:right;">Records</th></tr><tr><td>Organism</td><td style="text-align:right;">91</td></tr><tr><td>Assembly</td><td style="text-align:right;">55624</td></tr><tr><td>Gene</td><td style="text-align:right;">403636</td></tr><tr><td>mRNA</td><td style="text-align:right;">402784</td></tr><tr><td>Protein</td><td style="text-align:right;">402784</td></tr><tr><td>rRNA</td><td style="text-align:right;">1548</td></tr><tr><td>tRNA</td><td style="text-align:right;">5543</td></tr><tr><td>Exon</td><td style="text-align:right;">926116</td></tr><tr><td>DAN Transposon</td><td style="text-align:right;">35162</td></tr><tr><td>LINE Element</td><td style="text-align:right;">129061</td></tr><tr><td>SINE Element</td><td style="text-align:right;">50997</td></tr><tr><td>LTR Retrotransposon</td><td style="text-align:right;">222617</td></tr><tr><td>Repeat Region</td><td style="text-align:right;">32382</td></tr></table>
+                    <table class="datasum" style="margin: auto;" >
+                        <tr><th>Type</th><th style="text-align:right;">Records</th></tr>
+                        <tr><td>Assembly</td><td style="text-align:right;">2.48 Gb</td></tr>
+                        <tr><td>Unplaced</td><td style="text-align:right;">88.6 Mb</td></tr>
+                        <tr><td>Gaps</td><td style="text-align:right;">765</td></tr>
+                        <tr><td>Contig N50</td><td style="text-align:right;">28.6 Mb</td></tr>
+                        <tr><td>Scaffold N50</td><td style="text-align:right;">134.2 Mb</td></tr>
+                        <tr><td>mRNAs</td><td style="text-align:right;">22,924</td></tr>
+                        <tr><td>rRNAs</td><td style="text-align:right;">* * * *</td></tr>
+                        <tr><td>tRNAs</td><td style="text-align:right;">* * * *</td></tr>
+                        <tr><td>BACs</td><td style="text-align:right;">12,575</td></tr>
+                        <tr><td>Repeats</td><td style="text-align:right;">841.54 Mb</td></tr>
+                    </table>
                 </section>
             </div >
         </div>
     </div>
 
-
-    <!-- igv功能模块 -->
-    <div class="col-lg-12 col-md-10">
-        <div id="igv-div"></div>
-        <script>
-            var igvDiv = document.getElementById("igv-div");
-            var options =
-                {
-                    reference:{
-                        "id":"Panda",
-                        "name":"Panda v3",
-                        "fastaURL":"http://192.168.38.70:8081/gene/v3/genome/asm.cleaned.fasta.assembly.assembly.FINAL.fasta",
-                        "indexURL":"http://192.168.38.70:8081/gene/v3/genome/asm.cleaned.fasta.assembly.assembly.FINAL.fasta.fai",
-                        "aliasURL":"http://192.168.38.70:8081/gene/v3/genome/aliasForChromsomes.tab",
-                        "tracks":[
-                            {{ range .tracks}}
+<div class="igv">
+    <div class="container">
+        <!-- igv功能模块 -->
+        <div class="col-lg-12 col-md-10">
+            <div id="igv-div"></div>
+            <script>
+                var igvDiv = document.getElementById("igv-div");
+                var options =
+                    {
+                        reference:{
+                            "id":"Panda",
+                            "name":"Panda v3",
+                            "fastaURL":"http://192.168.38.70:8081/gene/v3/genome/asm.cleaned.fasta.assembly.assembly.FINAL.fasta",
+                            "indexURL":"http://192.168.38.70:8081/gene/v3/genome/asm.cleaned.fasta.assembly.assembly.FINAL.fasta.fai",
+                            "aliasURL":"http://192.168.38.70:8081/gene/v3/genome/aliasForChromsomes.tab",
+                            "tracks":[
+                                {{ range .tracks}}
                                 {
                                     type: "{{ .TrackType}}",
-                                    format: "{{.Format}}",
+                                        format: "{{.Format}}",
                                     name: "{{.Name}}",
                                     url: "{{.Url}}",
                                     indexURL:"{{.IndexURL}}",
                                     visibilityWindow:"{{printf "%d" .VisibilityWindow}}",
                                 },
-                            {{end}}
-                        ],
-                    },
-                    "locus":"Hic_asm_2:24,849,203-24,963,009",
-                };
+                                {{end}}
+                                ],
+                                },
+                                "locus":"Hic_asm_9:115,452,072-119,679,143",
+                                };
 
-            igv.createBrowser(igvDiv, options)
-                .then(function (browser) {
-                    console.log("Created IGV browser");
-                })
-        </script>
+                igv.createBrowser(igvDiv, options)
+                    .then(function (browser) {
+                        console.log("Created IGV browser");
+                    })
+            </script>
+        </div>
     </div>
-</div>
 {{template "footer" .}}
 
 </body>
