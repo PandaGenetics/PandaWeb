@@ -101,7 +101,7 @@ var BAClatest = track{
 var RNApi = track{
 	"alignment",
 	"bam",
-	"脾脏表达谱",
+	"RNA profile of spleen",
 	igvRootV3 + "/RNAseq/pi_sorted.bam",
 	igvRootV3 + "/RNAseq/pi_sorted.bam.bai",
 	10000,
