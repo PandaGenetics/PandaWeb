@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="modify sampling request">
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="unimportant">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/samplingSummary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/samplingSummary.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/genomeBrowser/igv.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/footer.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/footer.tmpl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/geneBrowser@v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geneBrowser@v3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/navigation.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/navigation.tmpl.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,10 @@
     <MESSAGE value="modify sampling request page" />
     <MESSAGE value="modify panda search in sampling request page" />
     <MESSAGE value="delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete" />
+    <MESSAGE value="modify igv margin width by container class" />
+    <MESSAGE value="delete redundant and repeat tracks and add Microhap track" />
+    <MESSAGE value="unimportant" />
+    <option name="LAST_COMMIT_MESSAGE" value="unimportant" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
