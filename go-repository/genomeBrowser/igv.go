@@ -11,7 +11,6 @@ import (
 )
 
 const igvRootV3 = "http://192.168.38.70:8081/gene/v3"
-const igvRootV2 = "http://192.168.38.70:8081/gene/v2"
 
 type track struct {
 	TrackType        string `json:"type"`
@@ -105,8 +104,6 @@ var RNApi = track{
 	igvRootV3 + "/RNAseq/pi_sorted.bam.bai",
 	10000,
 }
-
-//var igvTracks = gin.H{"mRNA": mRNA, "gap": gap, "BAC": BAC}
 
 func PandaGenomeV2(c *gin.Context) {
 	c.HTML(http.StatusOK, "geneBrowser@v2.html", gin.H{"tracks": LoadBam("data/bam_Filename.csv"),
