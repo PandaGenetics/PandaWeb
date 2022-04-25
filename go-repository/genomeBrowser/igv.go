@@ -106,8 +106,6 @@ var RNApi = track{
 	10000,
 }
 
-<<<<<<< HEAD
-=======
 var Microhaps = track{
 	"alignment",
 	"bam",
@@ -119,7 +117,6 @@ var Microhaps = track{
 
 //var igvTracks = gin.H{"mRNA": mRNA, "gap": gap, "BAC": BAC}
 
->>>>>>> b6cef19801b31e4ae279189cb2228c7249ba135c
 func PandaGenomeV2(c *gin.Context) {
 	c.HTML(http.StatusOK, "geneBrowser@v2.html", gin.H{"tracks": LoadBam("data/bam_Filename.csv"),
 		"root": "http://192.168.38.70:8081/gene"})

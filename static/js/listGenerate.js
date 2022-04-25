@@ -38,7 +38,6 @@ function loadingBAM(x){
             format: 'bam',
             url: ipAddress + '/alignment/' + x + '.bam',
             indexURL: ipAddress + '/alignment/' + x + '.bam.bai',
-            // name:
             sort: {
                 chr: "chr1",
                 position: 155155358,
