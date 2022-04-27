@@ -14,10 +14,10 @@ $(function(){
                         "<tr>" +
                         "<td>" + json[i].url + "</td>" +
                         "<td><label>" +
-                        "<input type='checkbox' class='track-select isotype-item sample-track' value='" + json[i].url + "' onclick='loadingVCF(this.value)'/>VCF" +
+                        "<input type='checkbox' class='track-select isotype-item sample-track' name='" + json[i].name + "' value='" + json[i].url + "' onclick='judgeVCF(this.value,this.name)'/>VCF" +
                         "</label></td>"+
                         "<td><label>" +
-                        "<input type='checkbox' class='track-select sample-track-alignment'  value='" + json[i].url + "' onclick='loadingBAM(this.value)'/>BAM" +
+                        "<input type='checkbox' class='track-select sample-track-alignment' name='" + json[i].name + "' value='" + json[i].url + "' onclick='judgeBAM(this.value,this.name)'/>BAM" +
                         "</label></td>"+
                         "</tr>"
                 }
@@ -27,15 +27,27 @@ $(function(){
     })
 })
 
-
 //load track
 const ipAddress = "http://192.168.38.70:8081/gene/v2"
 
-function loadingBAM(x){
+
+
+function judgeBAM(value,name){
+    let judegement = $("input[name=" + name + "]").prop("checked");
+    judegement ? loadingBAM(value,name) : igv.browser.removeTrackByName(name); 
+}
+
+function judgeVCF(value,name){
+    let judegement = $("input[name=" + name + "]").prop("checked");
+    judegement ? loadingVCF(value,name) : igv.browser.removeTrackByName(name); 
+}
+
+function loadingBAM(x,name){
     console.log(x);
         igv.browser.loadTrack({
             type: 'alignment',
             format: 'bam',
+            name: name,
             url: ipAddress + '/alignment/' + x + '.bam',
             indexURL: ipAddress + '/alignment/' + x + '.bam.bai',
             sort: {
@@ -47,11 +59,12 @@ function loadingBAM(x){
         })
 }
 
-function loadingVCF(x) {
+function loadingVCF(x,name) {
     console.log(x);
     igv.browser.loadTrack({
         type: "variant",
         format: "vcf",
+        name: name,
         url: ipAddress + '/variant/' + x + '.vcf.gz',
         indexURL: ipAddress + '/variant/' + x + '.vcf.gz.csi' ,
         // name: "1KG variants (chr22)",
