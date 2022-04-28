@@ -1,4 +1,6 @@
-// generate list
+// ListGenerate.js file is for generate the bam and vcf list and loading the relative tracks
+
+// This function is for get the data json file by AJAX, and generate list.
 $(function(){
     let request = $.ajax({
         type: "GET",
@@ -27,21 +29,19 @@ $(function(){
     })
 })
 
-//load track
+//All below the note is for loading Track.
 const ipAddress = "http://192.168.38.70:8081/gene/v2"
 
+// Function judgeBAM is for determine whether the selected BAM Track have been loaded.
 function judgeBAM(value,name){
+    // Judegement is used to obtain the status of the selected checkbox.
     let judegement = $("input[name=" + name + "]").prop("checked");
+    // This is for determine to load Track or remove Track.
     judegement ? loadingBAM(value,name) : igv.browser.removeTrackByName(name); 
 }
 
-function judgeVCF(value,name){
-    let judegement = $("input[name=" + name + "]").prop("checked");
-    judegement ? loadingVCF(value,name) : igv.browser.removeTrackByName(name); 
-}
-
+// Function loadingBAM is for loading BAM Track.
 function loadingBAM(x,name){
-    console.log(x);
     igv.browser.loadTrack({
         type: 'alignment',
         format: 'bam',
@@ -57,8 +57,14 @@ function loadingBAM(x,name){
     })
 }
 
+// Function judgeVCF is for determine whether the selected VCF Track have been loaded.
+function judgeVCF(value,name){
+    let judegement = $("input[name=" + name + "]").prop("checked");
+    judegement ? loadingVCF(value,name) : igv.browser.removeTrackByName(name); 
+}
+
+// Function loadingVCF is for loading VCF.
 function loadingVCF(x,name) {
-    console.log(x);
     igv.browser.loadTrack({
         type: "variant",
         format: "vcf",
