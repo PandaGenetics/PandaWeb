@@ -14,10 +14,10 @@ $(function(){
                         "<tr>" +
                         "<td>" + json[i].name + "</td>" +
                         "<td><label>" +
-                        "<input type='checkbox' class='track-select isotype-item sample-track' name='" + json[i].name + "_bam' value='" + json[i].url + "' onclick='judgeVCF(this.value, this.name)'/>VCF" +
+                        "<input type='checkbox' class='track-select isotype-item sample-track' name='" + json[i].name + "_vcf' value='" + json[i].url + "' onclick='judgeVCF(this.value, this.name)'/>VCF" +
                         "</label></td>"+
                         "<td><label>" +
-                        "<input type='checkbox' class='track-select sample-track-alignment' name='" + json[i].name + "_vcf' value='" + json[i].url + "' onclick='judgeBAM(this.value, this.name)'/>BAM" +
+                        "<input type='checkbox' class='track-select sample-track-alignment' name='" + json[i].name + "_bam' value='" + json[i].url + "' onclick='judgeBAM(this.value, this.name)'/>BAM" +
                         "</label></td>"+
                         "</tr>"
                 }
@@ -32,14 +32,7 @@ const ipAddress = "http://192.168.38.70:8081/gene/v2"
 
 function judgeBAM(value,name){
     let judegement = $("input[name=" + name + "]").prop("checked");
-    if(judegement){
-        loadingBAM(value, name)
-    }else{
-        igv.browser.removeTrackByName(name);
-    }
-    // name += "_bam";
-    // judegement ? loadingBAM(value,name) : igv.browser.removeTrackByName(name); 
-    // loadingBAM(value,name)
+    judegement ? loadingBAM(value,name) : igv.browser.removeTrackByName(name); 
 }
 
 function judgeVCF(value,name){
