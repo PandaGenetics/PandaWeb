@@ -34,6 +34,13 @@ git checkout # switch branches or restore working tree files.
 ```bash
 git fetch # Download objects and refs from another repository.
 ```
+
+# 2022-04-25
+```bash
+git checkout -- * # delete any modified 
+git pull --rebase # update local branch
+```
+
 ## [Screen](https://linuxize.com/post/how-to-use-linux-screen/)
 -----
 ```bash

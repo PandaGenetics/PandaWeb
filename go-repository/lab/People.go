@@ -1,8 +1,9 @@
 package lab
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func People(c *gin.Context) {

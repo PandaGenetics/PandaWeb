@@ -11,7 +11,6 @@ import (
 )
 
 const igvRootV3 = "http://192.168.38.70:8081/gene/v3"
-const igvRootV2 = "http://192.168.38.70:8081/gene/v2"
 
 type track struct {
 	TrackType        string `json:"type"`

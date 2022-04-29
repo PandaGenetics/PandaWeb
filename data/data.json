@@ -2,1011 +2,991 @@
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_jiaozi_progeny_2",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100238-1r.bam"
+    "url": "FDSW202100238-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_qiyuan_progeny_1",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100239-1r.bam"
+    "url": "FDSW202100239-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_pingping",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100240-1r.bam"
+    "url": "FDSW202100240-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "312",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100241-1r.bam"
+    "url": "FDSW202100241-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_cancan",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100242-1r.bam"
+    "url": "FDSW202100242-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_qinghe_progeny_1",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100243-1r.bam"
+    "url": "FDSW202100243-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_shishi_progeny_1",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100244-1r.bam"
+    "url": "FDSW202100244-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "287",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100245-1r.bam"
+    "url": "FDSW202100245-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "509",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100246-1r.bam"
+    "url": "FDSW202100246-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_aibang_progeny_1",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100247-1r.bam"
+    "url": "FDSW202100247-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_A4",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100249-1r.bam"
+    "url": "FDSW202100249-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "870",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100956-1r.bam"
+    "url": "FDSW202100956-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "858",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100958-1r.bam"
+    "url": "FDSW202100958-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "857",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100959-1r.bam"
+    "url": "FDSW202100959-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "725",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100960-1r.bam"
+    "url": "FDSW202100960-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "678",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100961-1r.bam"
+    "url": "FDSW202100961-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "871",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100962-1r.bam"
+    "url": "FDSW202100962-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "681",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202100963-1r.bam"
+    "url": "FDSW202100963-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1203",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202143894-1r.bam"
+    "url": "FDSW202143894-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1224",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202143895-1r.bam"
+    "url": "FDSW202143895-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "765",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202290695-1r.bam"
+    "url": "FDSW210021237-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "725",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW202290696-1r.bam"
+    "url": "FDSW210021238-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "870",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021237-1r.bam"
+    "url": "FDSW210021239-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "871",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021238-1r.bam"
+    "url": "FDSW210021240-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "681",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021239-1r.bam"
+    "url": "FDSW210021241-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "857",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021240-1r.bam"
+    "url": "FDSW210021242-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "858",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021241-1r.bam"
+    "url": "FDSW210021243-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "598",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021242-1r.bam"
+    "url": "FDSW210021244-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "523",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021243-1r.bam"
+    "url": "FDSW210021700-1b"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "570",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021244-1r.bam"
+    "url": "FDSW210021701-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "788",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021700-1b.bam"
+    "url": "FDSW210021702-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "680",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021701-1r.bam"
+    "url": "FDSW210021703-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1032",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021702-1r.bam"
+    "url": "FDSW210021704-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1033",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021703-1r.bam"
+    "url": "FDSW210021705-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "649",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021704-1r.bam"
+    "url": "FDSW210021706-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "990",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021705-1r.bam"
+    "url": "FDSW210021707-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "532",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021706-1r.bam"
+    "url": "FDSW210021708-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "522",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021707-1r.bam"
+    "url": "FDSW210021709-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "637",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021708-1r.bam"
+    "url": "FDSW210021710-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "762",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021709-1r.bam"
+    "url": "FDSW210021711-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "584",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021710-1r.bam"
+    "url": "FDSW210021712-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "480",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021711-1r.bam"
+    "url": "FDSW210021713-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "703",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021712-1r.bam"
+    "url": "FDSW210021714-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "635",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021713-1r.bam"
+    "url": "FDSW210021715-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "963",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021714-1r.bam"
+    "url": "FDSW210021716-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "731",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021715-1r.bam"
+    "url": "FDSW210021717-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "555",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021716-1r.bam"
+    "url": "FDSW210021718-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "665",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021717-1r.bam"
+    "url": "FDSW210021719-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "671",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021718-1r.bam"
+    "url": "FDSW210021720-1b"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "796",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021719-1r.bam"
+    "url": "FDSW210021721-1b"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "342",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021720-1b.bam"
+    "url": "FDSW210021722-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "645",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021721-1b.bam"
+    "url": "FDSW210021723-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "561",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021722-1r.bam"
+    "url": "FDSW210021724-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "314",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021723-1r.bam"
+    "url": "FDSW210021725-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "537",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021724-1r.bam"
+    "url": "FDSW210021726-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "761",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021725-1r.bam"
+    "url": "FDSW210021727-1b"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "783",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021726-1r.bam"
+    "url": "FDSW210021728-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "709",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021727-1b.bam"
+    "url": "FDSW210021729-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "490",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021728-1r.bam"
+    "url": "FDSW210021730-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "278",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021729-1r.bam"
+    "url": "FDSW210021731-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "717",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021730-1r.bam"
+    "url": "FDSW210021732-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "823",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021731-1r.bam"
+    "url": "FDSW210021733-2r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "362",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021732-1r.bam"
+    "url": "FDSW210021734-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_jiumei",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021733-2r.bam"
+    "url": "FDSW210021735-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "895",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021734-1r.bam"
+    "url": "FDSW210021736-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "954",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021735-1r.bam"
+    "url": "FDSW210021737-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "894",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021736-1r.bam"
+    "url": "FDSW210021738-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "496",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021737-1r.bam"
+    "url": "FDSW210021739-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "394",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021738-1r.bam"
+    "url": "FDSW210021740-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "986",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021739-1r.bam"
+    "url": "FDSW210021741-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1082",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021740-1r.bam"
+    "url": "FDSW210021742-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1081",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021741-1r.bam"
+    "url": "FDSW210021743-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1077",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021742-1r.bam"
+    "url": "FDSW210021744-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "948",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021743-1r.bam"
+    "url": "FDSW210021745-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "994",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021744-1r.bam"
+    "url": "FDSW210021746-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1038",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021745-1r.bam"
+    "url": "FDSW210021747-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "831",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021746-1r.bam"
+    "url": "FDSW210021748-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1016",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021747-1r.bam"
+    "url": "FDSW210021749-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1017",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021748-1r.bam"
+    "url": "FDSW210021750-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1073",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021749-1r.bam"
+    "url": "FDSW210021751-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1056",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021750-1r.bam"
+    "url": "FDSW210021752-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1122",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021751-1r.bam"
+    "url": "FDSW210021753-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1129",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021752-1r.bam"
+    "url": "FDSW210021754-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1013",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021753-1r.bam"
+    "url": "FDSW210021755-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "540",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021754-1r.bam"
+    "url": "FDSW210021756-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "401",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021755-1r.bam"
+    "url": "FDSW210021757-1b"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1145",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021756-1r.bam"
+    "url": "FDSW210021758-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1124",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021757-1b.bam"
+    "url": "FDSW210021759-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1125",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021758-1r.bam"
+    "url": "FDSW210021760-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "652",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021759-1r.bam"
+    "url": "FDSW210021761-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1119",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021760-1r.bam"
+    "url": "FDSW210021762-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "724",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021761-1r.bam"
+    "url": "FDSW210021763-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "853",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021762-1r.bam"
+    "url": "FDSW210021764-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "703",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021763-1r.bam"
+    "url": "FDSW210021765-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "883",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021764-1r.bam"
+    "url": "FDSW210021766-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "1008",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021765-1r.bam"
+    "url": "FDSW210021767-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "958",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021766-1r.bam"
+    "url": "FDSW210021768-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_lili_progny_1",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021767-1r.bam"
+    "url": "FDSW210021769-1r"
   },
   {
     "type": "annotation",
     "json": "bam",
-    "name": "",
+    "name": "unnamed_jiaozi_progeny_1",
     "chr": "chr1",
     "position": "1000000",
     "option": "BASE",
     "direction": "ASC",
-    "url": "FDSW210021768-1r.bam"
-  },
-  {
-    "type": "annotation",
-    "json": "bam",
-    "name": "",
-    "chr": "chr1",
-    "position": "1000000",
-    "option": "BASE",
-    "direction": "ASC",
-    "url": "FDSW210021769-1r.bam"
-  },
-  {
-    "type": "annotation",
-    "json": "bam",
-    "name": "",
-    "chr": "chr1",
-    "position": "1000000",
-    "option": "BASE",
-    "direction": "ASC",
-    "url": "FDSW210021770-1b.bam"
+    "url": "FDSW210021770-1b"
   }
 ]

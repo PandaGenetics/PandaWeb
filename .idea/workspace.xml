@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="unimportant" />
+    <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="unimportant">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +29,6 @@
     <option name="NEW_BASE" value="master" />
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -107,6 +108,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="change" />
+    <MESSAGE value="add panda genome v2 tracks in genebrowser.html page" />
+    <MESSAGE value="add sampling system" />
     <MESSAGE value="Add Sampling Request Page" />
     <MESSAGE value="correct indentation" />
     <MESSAGE value="create a new package for igv logic in /go-repository/genomebrowser/igv.go" />
@@ -127,10 +131,6 @@
     <MESSAGE value="delete" />
     <MESSAGE value="modify igv margin width by container class" />
     <MESSAGE value="delete redundant and repeat tracks and add Microhap track" />
-    <MESSAGE value="delete suffix &quot;org&quot;" />
-    <MESSAGE value="modify genome summary info." />
-    <MESSAGE value="translate chinese" />
-    <MESSAGE value="rename Title" />
     <MESSAGE value="unimportant" />
     <option name="LAST_COMMIT_MESSAGE" value="unimportant" />
   </component>
