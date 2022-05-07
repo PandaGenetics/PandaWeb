@@ -30,6 +30,9 @@ func main() {
 	router.GET("/pedigree", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "pedigree.html", gin.H{})
 	})
+	router.GET("/pedigree_test", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "pedigree_test.html", gin.H{})
+	})
 
 	router.GET("/samplingsummary", sampling.SampleSummary)
 	router.POST("/samplingsummary", sampling.SampleDelete)

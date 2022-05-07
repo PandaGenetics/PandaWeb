@@ -14,13 +14,17 @@ $(function(){
                 for(let i=0;i<json.length;i++){
                     targetHTML +=
                         "<tr>" +
-                        "<td>" + json[i].name + "</td>" +
-                        "<td><label>" +
-                        "<input type='checkbox' class='track-select isotype-item sample-track' name='" + json[i].name + "_vcf' value='" + json[i].url + "' onclick='judgeVCF(this.value, this.name)'/>VCF" +
-                        "</label></td>"+
-                        "<td><label>" +
-                        "<input type='checkbox' class='track-select sample-track-alignment' name='" + json[i].name + "_bam' value='" + json[i].url + "' onclick='judgeBAM(this.value, this.name)'/>BAM" +
-                        "</label></td>"+
+                            "<td>" + json[i].name + "</td>" +
+                            "<td>" +
+                                "<label>" +
+                                    "<input type='checkbox' class='track-select isotype-item sample-track' name='" + json[i].name + "_vcf' value='" + json[i].url + "' onclick='judgeVCF(this.value, this.name)'/>VCF" +
+                                "</label>" +
+                            "</td>"+
+                            "<td>" +
+                                "<label>" +
+                                    "<input type='checkbox' class='track-select sample-track-alignment' name='" + json[i].name + "_bam' value='" + json[i].url + "' onclick='judgeBAM(this.value, this.name)'/>BAM" +
+                                "</label>" +
+                            "</td>"+
                         "</tr>"
                 }
             }
