@@ -1,12 +1,13 @@
 package main
 
 import (
+	"net/http"
+
 	"github.com/PandaGenetics/PandaWeb/go-repository/genomeBrowser"
 	"github.com/PandaGenetics/PandaWeb/go-repository/lab"
 	"github.com/PandaGenetics/PandaWeb/go-repository/sampling"
 	"github.com/PandaGenetics/PandaWeb/go-repository/utility"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 func main() {

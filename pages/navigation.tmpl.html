@@ -12,27 +12,44 @@
 
         <!-- navbar-fixed-top -->
         <nav class="nav .navbar-collapse" style="padding-left: 8.7%">
-                <div class="navbar-header">
-                    <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
                 <div class="collapse navbar-collapse" id="navbar" style="padding-left: 0%;">
                     <ul class="nav navbar-nav my-2">
                         <li><a href="/">Home</a></li>
-                        <li><a href="genebrowser2">Genome Browser</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-menu" data-toggle="dropdown" href="#">Genome Browser<span class="caret"></b></a>
+                            <ul class="dropdown-menu" style="z-index: 999; position: relative;">
+                                <li><a href="genebrowser2">v2</a></li>
+                                <li><a href="genebrowser3">v3</a></li>
+                            </ul>
+                        </li>
                         <li><a href="pedigree">Pedigree</a></li>
                         <li><a href="people">People</a></li>
                         <li><a href="publication">Public</a></li>
                         <li><a href="samplingsummary">采样系统</a></li>
                         <li><a href="#">Individual</a></li>
-<!--                        <li><a href="samplingsummary">采样系统</a></li> -->
                     </ul>
                 </div>
         </nav>
     </div>
 {{end}}
+
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">主题
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Java</a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+        </li>
+    </ul>
+</div>
