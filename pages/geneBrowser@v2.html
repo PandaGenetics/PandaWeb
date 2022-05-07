@@ -7,7 +7,7 @@
     <title>Panda-DB | Genome Browser</title>
     <!-- 导入igv2.10.5 -->
     <script src="https://cdn.jsdelivr.net/npm/igv@2.10.5/dist/igv.min.js"></script>
-    <!-- Data manipulation -->
+    <!-- Data manipulat -->
     <script src="../static/js/listGenerate.js" type="text/javascript"></script>
 </head>
 <body>
@@ -42,7 +42,7 @@
             <h3>Tracks</h3>
             <div class="checkbox">
                 <label>
-                    <input class="track-select normal-track" type="checkbox" value="Genes">Genes
+                    <input class="track-select normal-track" type="checkbox" value="Genes" onclick="loadGff3()">Genes
                 </label>
             </div>
             <div class="checkbox">

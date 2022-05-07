@@ -82,3 +82,35 @@ function loadingVCF(x,name) {
         visibilityWindow: 1000,
     })
 }
+
+
+// Function loadGff3 is for loading gff3
+function loadGff3(){
+    igv.browser.loadTrack({
+        // name: "Color by function",
+        format: "gff3",
+        displayMode: "expanded",
+        height: 300,
+        url: ipAddress + '/annotation/' + 'Ailuropoda_melanoleuca.ASM200744v2.105.sorted.gff3.gz',
+        indexURL: ipAddress + '/annotation/' + 'Ailuropoda_melanoleuca.ASM200744v2.105.sorted.gff3.gz.tbi',
+        visibilityWindow: 1000000,
+        color: (feature) => {
+            switch (feature.getAttributeValue("biotype")) {
+                case "antisense":
+                    return "blueviolet"
+                case "protein_coding":
+                    return "blue"
+                case "retained_intron":
+                    return "rgb(0, 150, 150)"
+                case "processed_transcript":
+                    return "purple"
+                case "processed_pseudogene":
+                    return "#7fff00"
+                case "unprocessed_pseudogene":
+                    return "#d2691e"
+                default:
+                    return "black"
+            }
+        }
+    })
+}
