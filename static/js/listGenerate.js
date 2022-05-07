@@ -79,9 +79,14 @@ function loadingVCF(x,name) {
     })
 }
 
+// Function judgeGff3 is for determine whether the gff3 file have been loaded.
+function judgeGff3(name){
+    let judegement = $("input[name=" + name + "]").prop("checked");
+    judegement ? loadingGff3() : igv.browser.removeTrackByName(name);
+}
 
 // Function loadGff3 is for loading gff3
-function loadGff3(){
+function loadingGff3(){
     igv.browser.loadTrack({
         // name: "Color by function",
         format: "gff3",
