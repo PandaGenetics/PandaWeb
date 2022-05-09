@@ -15,12 +15,16 @@ $(function () {
                     targetHTML +=
                         "<tr>" +
                         "<td>" + json[i].name + "</td>" +
-                        "<td><label>" +
+                        "<td>" +
+                        "<label>" +
                         "<input type='checkbox' class='track-select isotype-item sample-track' name='" + json[i].name + "_vcf' value='" + json[i].url + "' onclick='judgeVCF(this.value, this.name)'/>VCF" +
-                        "</label></td>" +
-                        "<td><label>" +
+                        "</label>" +
+                        "</td>" +
+                        "<td>" +
+                        "<label>" +
                         "<input type='checkbox' class='track-select sample-track-alignment' name='" + json[i].name + "_bam' value='" + json[i].url + "' onclick='judgeBAM(this.value, this.name)'/>BAM" +
-                        "</label></td>" +
+                        "</label>" +
+                        "</td>" +
                         "</tr>"
                 }
             }
