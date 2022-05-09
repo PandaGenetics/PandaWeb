@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{template "header" .}}
     <title>SamplingSummary</title>
 </head>
+
 <body>
-{{template "navigation" .}}
+    {{template "navigation" .}}
     <div class="container">
         <a href="samplingrequest">SAMPLING REQUEST</a>
         <a href="samplingsummary">SAMPLING SUMMARY</a>
         <form action="/samplingsummary" method="post">
             <table class="table table-striped table-hover">
                 <thead>
-                <tr>
-                    <th scope="col">序号</th>                  <!-- 0 -->
-                    <th scope="col">个体</th>   <!-- 1 -->
-                    <th scope="col">不抗凝</th>          <!-- 2 -->
-                    <th scope="col">肝素钠抗凝</th>      <!-- 3 -->
-                    <th scope="col">EDTA-K2抗凝</th>      <!-- 4 -->
-                    <th scope="col">其他</th>                  <!-- 5 -->
-                    <th scope="col">血样用途</th>               <!-- 6 -->
-                    <th scope="col">项目</th>                  <!-- 7 -->
-                    <th scope="col">IACUC编号</th>             <!-- 8 -->
-                    <th scope="col">项目负责人</th>             <!-- 9 -->
-                    <th scope="col">联系人</th>                <!-- 10 -->
-                    <th scope="col">备注</th>                  <!-- 11 -->
-                    <th scope="col"><input type="submit" value="删除"></th>
-                </tr>
+                    <tr>
+                        <th scope="col">序号</th> <!-- 0 -->
+                        <th scope="col">个体</th> <!-- 1 -->
+                        <th scope="col">不抗凝</th> <!-- 2 -->
+                        <th scope="col">肝素钠抗凝</th> <!-- 3 -->
+                        <th scope="col">EDTA-K2抗凝</th> <!-- 4 -->
+                        <th scope="col">其他</th> <!-- 5 -->
+                        <th scope="col">血样用途</th> <!-- 6 -->
+                        <th scope="col">项目</th> <!-- 7 -->
+                        <th scope="col">IACUC编号</th> <!-- 8 -->
+                        <th scope="col">项目负责人</th> <!-- 9 -->
+                        <th scope="col">联系人</th> <!-- 10 -->
+                        <th scope="col">备注</th> <!-- 11 -->
+                        <th scope="col"><input type="submit" value="删除"></th>
+                    </tr>
                 </thead>
                 <tbody>
                     {{ range .records}}
-                        <tr>
-                            <th scope="row">{{ .PID }}</th>
-                            <td>{{ .PandaName }}</td>
-                            <td>{{ .RequestForCoagulation }}</td>
-                            <td>{{ .RequestForHeparin }}</td>
-                            <td>{{ .RequestForEDTA }}</td>
-                            <td>{{ .RequestForOther }}</td>
-                            <td>{{ .Purpose }}</td>
-                            <td>{{ .Project }}</td>
-                            <td>{{ .IACUC }}</td>
-                            <td>{{ .ProjectManager }}</td>
-                            <td>{{ .Contact }}</td>
-                            <td>{{ .Notes }}</td>
-                            <td><input type="checkbox" name="delete" value="{{ .PID }}"></td>
-                        </tr>
+                    <tr>
+                        <th scope="row">{{ .PID }}</th>
+                        <td>{{ .PandaName }}</td>
+                        <td>{{ .RequestForCoagulation }}</td>
+                        <td>{{ .RequestForHeparin }}</td>
+                        <td>{{ .RequestForEDTA }}</td>
+                        <td>{{ .RequestForOther }}</td>
+                        <td>{{ .Purpose }}</td>
+                        <td>{{ .Project }}</td>
+                        <td>{{ .IACUC }}</td>
+                        <td>{{ .ProjectManager }}</td>
+                        <td>{{ .Contact }}</td>
+                        <td>{{ .Notes }}</td>
+                        <td><input type="checkbox" name="delete" value="{{ .PID }}"></td>
+                    </tr>
                     {{end}}
                 </tbody>
             </table>
         </form>
     </div>
-{{template "footer" .}}
+    {{template "footer" .}}
 </body>
+
 </html>

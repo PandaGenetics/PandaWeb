@@ -1,21 +1,22 @@
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
-.content{
+
+.content {
     flex: 1;
 }
 
-body{
-    padding-bottom: 0px;
-    margin: 0px;
+body {
+    padding-bottom: 0%;
+    margin: 0%;
 }
 
-.igv{
-    padding-bottom: 40px;
+.igv {
+    padding-bottom: 6%;
 }

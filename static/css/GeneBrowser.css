@@ -1,12 +1,24 @@
-.navbar-nav>li>a{
+.navbar-nav>li>a {
     font-size: medium;
 }
 
-.nav{
-    background:rgba(250,235,215,.3);
+.nav {
+    background: rgba(250, 235, 215, .3);
     backdrop-filter: blur(2px);
 }
 
-.checkbox{
+.checkbox {
     font-size: medium;
+}
+
+.dropdown-menu {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    overflow: auto;
+}
+
+.dropdown-menu li {
+    display: block;
+    text-decoration: none;
 }
