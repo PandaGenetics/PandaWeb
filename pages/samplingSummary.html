@@ -7,8 +7,10 @@
 <body>
 {{template "navigation" .}}
     <div class="container">
-        <a href="samplingrequest">SAMPLING REQUEST</a>
-        <a href="samplingsummary">SAMPLING SUMMARY</a>
+        <div>
+            <button type="button" class="btn btn-info" ><a href="samplingsummary">SAMPLING SUMMARY</a></button>
+            <button type="button" class="btn btn-success" ><a href="samplingrequest">SAMPLING REQUEST</a></button>
+        </div>
         <form action="/samplingsummary" method="post">
             <table class="table table-striped table-hover">
                 <thead>
@@ -25,7 +27,7 @@
                     <th scope="col">项目负责人</th>             <!-- 9 -->
                     <th scope="col">联系人</th>                <!-- 10 -->
                     <th scope="col">备注</th>                  <!-- 11 -->
-                    <th scope="col"><input type="submit" value="删除"></th>
+                    <th scope="col"><input class="btn-danger" type="submit" value="删除"></th>
                 </tr>
                 </thead>
                 <tbody>

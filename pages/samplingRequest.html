@@ -17,7 +17,7 @@
     }
 
     label {
-      padding: 12px 12px 12px 0;
+      padding: 12px 12px 12px 60px;
       display: inline-block;
     }
 
@@ -35,11 +35,11 @@
       background-color: #45a049;
     }
 
-    .container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
+    /*.container {*/
+    /*  border-radius: 5px;*/
+    /*  background-color: #f2f2f2;*/
+    /*  padding: 20px;*/
+    /*}*/
 
     .col-25 {
       float: left;
@@ -72,9 +72,11 @@
 <body>
   {{ template "navigation" . }}
   <div class="container">
-    <a href="samplingrequest">SAMPLING REQUEST</a>
-    <a href="samplingsummary">SAMPLING SUMMARY</a>
-    <form action="/samplingrequest" method="post">
+      <div>
+          <button type="button" class="btn btn-info"><a href="samplingsummary">SAMPLING SUMMARY</a></button>
+          <button type="button" class="btn btn-success"><a href="samplingrequest">SAMPLING REQUEST</a></button>
+      </div>
+      <form action="/samplingrequest" method="post" class="container">
           <div class="row">
               <div class="col-25">
                   <label for="panda_name">采血个体（大熊猫姓名）</label>
@@ -82,12 +84,12 @@
               <div class="col-75">
                   <input type="text" id="panda_name" readonly required>
                   <input type="hidden" id="PID" name="PID" >    <!-- server receives value-->
-                  <input type="text" id="search" onkeyup="myFunction()" name="panda_name" placeholder="Panda Name">
+                  <input type="text" id="search" onkeyup="myFunction()" name="panda_name" placeholder="Searching giant panda by pedigree ID">
                   <!-- hidden list-->
                   <ul id="pandas">
                       {{ range .pandas }}
                           <li name="panda" id="{{ .PID }}" style="display: none" onclick="addValue({{ .PID }})">
-                              <a href="#">{{ .ChineseName }}</a>
+                              <a href="#">{{ .PID }}:{{.Name}}</a>
                           </li>
                       {{ end }}
                   </ul>
@@ -100,20 +102,20 @@
               </div>
               <div class="col-75 ">
                   <div class="col-25">
-                      <label for="request_for_coagulation">不抗凝</label>
-                      <input type="text" id="request_for_coagulation" name="request_for_coagulation" placeholder="2-3 mL">
+                      <label for="request_for_coagulation">不抗凝 (mL)</label>
+                      <input type="text" id="request_for_coagulation" name="request_for_coagulation" value="0">
                   </div>
                   <div class="col-25">
-                      <label for="request_for_heparin">肝素钠抗凝</label>
-                      <input type="text" id="request_for_heparin" name="request_for_heparin" placeholder=" mL">
+                      <label for="request_for_heparin">肝素钠抗凝 (mL)</label>
+                      <input type="text" id="request_for_heparin" name="request_for_heparin" value="0">
                   </div>
                   <div class="col-25">
-                      <label for="request_for_edta">EDTA-K2抗凝</label>
-                      <input type="text" id="request_for_edta" name="request_for_edta" placeholder=" mL">
+                      <label for="request_for_edta">EDTA-K2抗凝 (mL)</label>
+                      <input type="text" id="request_for_edta" name="request_for_edta" value="0">
                   </div>
                   <div class="col-25">
-                      <label for="request_for_other">其他</label>
-                      <input type="text" id="request_for_other" name="request_for_other" placeholder=" mL">
+                      <label for="request_for_other">其他 (mL)</label>
+                      <input type="text" id="request_for_other" name="request_for_other" value="0">
                   </div>
               </div>
           </div>
@@ -184,18 +186,12 @@
           for (i = 0; i < li.length; i++) {
               a = li[i].getElementsByTagName("a")[0];
               txtValue = a.innerText;
-              console.log(a.textContent, a.innerText)
-
               if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != "") {
                   li[i].style.display = "";
-                  console.log(filter+"。。。。。1");
-                  console.log(txtValue.toUpperCase().indexOf(filter));
               } else if (filter == "" || filter == undefined ) {
                   li[i].style.display = "none";
-                  console.log(filter+"。。。。。2");
               } else {
                   li[i].style.display = "none";
-                  console.log(filter+"。。。。。3");
               }
           }
       }

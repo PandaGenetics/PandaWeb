@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -129,10 +130,12 @@ func SampleAppend(c *gin.Context) {
 	formPIDValue := c.PostForm("PID")
 	pandas := strings.Split(formPIDValue, ",")
 	fmt.Println(formPIDValue, pandas)
+	Pandas := PandaIndividual.NewConfig()
 	for _, panda := range pandas {
+		PID, _ := strconv.ParseUint(panda, 10, 64)
 		NewRecord := Sampling{
 			panda,
-			c.PostForm("panda_name"),
+			Pandas.Population[uint(PID)].Name,
 			c.PostForm("request_for_coagulation"),
 			c.PostForm("request_for_heparin"),
 			c.PostForm("request_for_edta"),

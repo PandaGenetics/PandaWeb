@@ -53,6 +53,6 @@ type Config struct {
 }
 
 func NewConfig() *Config {
-	file := "data/2020-Living-Pedigree.csv"
+	file := "data/panda/2020-Living-Pedigree.csv"
 	return &Config{Population: NewPandaPopulation(file)}
 }
