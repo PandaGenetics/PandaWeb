@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{template "header" .}}
     <title>Pedigree</title>
 </head>
+
 <body>
     {{template "navigation" .}}
     <div class="content">
         <div class="container-fliud">
-            <iframe src="https://pandagenetics.shinyapps.io/panda_pedigree/" id="iframe" name="content" width="100%" height="650px" frameborder="0"></iframe>
+            <iframe src="https://pandagenetics.shinyapps.io/panda_pedigree/" id="iframe" name="content" width="100%"
+                height="650px" frameborder="0"></iframe>
         </div>
     </div>
     {{template "footer" .}}
 </body>
 
 <script type="text/javascript">
-    function iframeLoad()
-    {
-        document.getElementById("iframe").height=0;
-        document.getElementById("iframe").height=document.getElementById("iframe").contentWindow.document.body.scrollHeight;
+    function iframeLoad() {
+        document.getElementById("iframe").height = 0;
+        document.getElementById("iframe").height = document.getElementById("iframe").contentWindow.document.body.scrollHeight;
     }
 </script>
+
 </html>
