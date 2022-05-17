@@ -79,7 +79,7 @@
       <form action="/samplingrequest" method="post" class="container">
           <div class="row">
               <div class="col-25">
-                  <label for="panda_name">采血个体（大熊猫姓名）</label>
+                  <label for="panda_name">Panda Name</label>
               </div>
               <div class="col-75">
                   <input type="text" id="panda_name" readonly required>
@@ -89,39 +89,60 @@
                   <ul id="pandas">
                       {{ range .pandas }}
                           <li name="panda" id="{{ .PID }}" style="display: none" onclick="addValue({{ .PID }})">
-                              <a href="#">{{ .PID }}:{{.Name}}</a>
+                              <a href="#">{{ .PID }}: {{.Name}}&#9{{.Sex}}</a>
                           </li>
                       {{ end }}
                   </ul>
               </div>
           </div>
 
+<!--          <div class="row">-->
+<!--              <div class="col-25">-->
+<!--                  <label>需求血量</label>-->
+<!--              </div>-->
+<!--              <div class="col-75 ">-->
+<!--                  <div class="col-25">-->
+<!--                      <label for="request_for_coagulation">不抗凝 (mL)</label>-->
+<!--                      <input type="text" id="request_for_coagulation" name="request_for_coagulation" value="0">-->
+<!--                  </div>-->
+<!--                  <div class="col-25">-->
+<!--                      <label for="request_for_heparin">肝素钠抗凝 (mL)</label>-->
+<!--                      <input type="text" id="request_for_heparin" name="request_for_heparin" value="0">-->
+<!--                  </div>-->
+<!--                  <div class="col-25">-->
+<!--                      <label for="request_for_edta">EDTA-K2抗凝 (mL)</label>-->
+<!--                      <input type="text" id="request_for_edta" name="request_for_edta" value="0">-->
+<!--                  </div>-->
+<!--                  <div class="col-25">-->
+<!--                      <label for="request_for_other">其他 (mL)</label>-->
+<!--                      <input type="text" id="request_for_other" name="request_for_other" value="0">-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--          </div>-->
           <div class="row">
-              <div class="col-25">
-                  <label>需求血量</label>
+              <div class="col-25 ">
+                  <label for="sample_type" style="padding:0px 12px 12px 60px">Sample type</label>
               </div>
-              <div class="col-75 ">
-                  <div class="col-25">
-                      <label for="request_for_coagulation">不抗凝 (mL)</label>
-                      <input type="text" id="request_for_coagulation" name="request_for_coagulation" value="0">
-                  </div>
-                  <div class="col-25">
-                      <label for="request_for_heparin">肝素钠抗凝 (mL)</label>
-                      <input type="text" id="request_for_heparin" name="request_for_heparin" value="0">
-                  </div>
-                  <div class="col-25">
-                      <label for="request_for_edta">EDTA-K2抗凝 (mL)</label>
-                      <input type="text" id="request_for_edta" name="request_for_edta" value="0">
-                  </div>
-                  <div class="col-25">
-                      <label for="request_for_other">其他 (mL)</label>
-                      <input type="text" id="request_for_other" name="request_for_other" value="0">
-                  </div>
+              <div class="col-25">
+                  <select id="sample_type" name="sample_type">
+                      <option value="Blood">Blood</option>
+                      <option value="Stool">Stool</option>
+                      <option value="Urine">Urine</option>
+                      <option value="Swab">Swab</option>
+                  </select>
               </div>
           </div>
           <div class="row">
               <div class="col-25">
-                  <label for="purpose">血样用途</label>
+                  <label for="sample_type">Sample quantity</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="sample_quantity" name="sample_quantity" value="0">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label for="purpose">Purpose</label>
               </div>
               <div class="col-75">
                   <input type="text" id="purpose" name="purpose" placeholder="" required>
@@ -129,7 +150,7 @@
           </div>
           <div class="row">
               <div class="col-25">
-                  <label for="project">项目</label>
+                  <label for="project">Project</label>
               </div>
               <div class="col-75">
                   <input type="text" id="project" name="project" placeholder="" required>
@@ -137,7 +158,7 @@
           </div>
           <div class="row">
               <div class="col-25">
-                  <label for="iacuc">IACUC编号</label>
+                  <label for="iacuc">IACUC ID</label>
               </div>
               <div class="col-75">
                   <input type="text" id="iacuc" name="iacuc" placeholder="">
@@ -145,7 +166,7 @@
           </div>
           <div class="row">
               <div class="col-25">
-                  <label for="project_manager">项目负责人</label>
+                  <label for="project_manager">Manager</label>
               </div>
               <div class="col-75">
                   <input type="text" id="project_manager" name="project_manager" placeholder="" required>
@@ -153,7 +174,7 @@
           </div>
           <div class="row">
               <div class="col-25">
-                  <label for="contact">联系人</label>
+                  <label for="contact">Contact</label>
               </div>
               <div class="col-75">
                   <input type="text" id="contact" name="contact" placeholder="" required>
@@ -161,7 +182,7 @@
           </div>
           <div class="row">
               <div class="col-25">
-                  <label for="notes">备注</label>
+                  <label for="notes">Notes</label>
               </div>
               <div class="col-75">
                   <textarea id="notes" name="notes" placeholder="Write something.." style="height:200px"></textarea>

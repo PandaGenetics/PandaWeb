@@ -15,23 +15,28 @@ import (
 
 // Sampling records a list of information for requesting panda sample.
 type Sampling struct {
-	PID                   string `json:"id"` // pedigree_id
-	PandaName             string `json:"panda_name"`
-	RequestForCoagulation string `json:"request_for_coagulation"` // Coagulation
-	RequestForHeparin     string `json:"request_for_heparin"`     // Anti-coagulation sodium heparin 肝素钠
-	RequestForEDTA        string `json:"request_for_edta"`        // Anti-coagulation EDTA
-	RequestForOther       string `json:"request_for_other"`
-	Purpose               string `json:"purpose"`
-	Project               string `json:"project"`
-	IACUC                 string `json:"iacuc"`
-	ProjectManager        string `json:"project_manager"`
-	Contact               string `json:"contact"`
-	Notes                 string `json:"notes"`
+	PID       string `json:"id"` // pedigree_id
+	PandaName string `json:"panda_name"`
+	//RequestForCoagulation string `json:"request_for_coagulation"` // Coagulation
+	//RequestForHeparin     string `json:"request_for_heparin"`     // Anti-coagulation sodium heparin 肝素钠
+	//RequestForEDTA        string `json:"request_for_edta"`        // Anti-coagulation EDTA
+	//RequestForOther       string `json:"request_for_other"`
+	SampleType     string `json:"sample_type"`
+	SampleQuantity string `json:"sample_quantity"`
+	Purpose        string `json:"purpose"`
+	Project        string `json:"project"`
+	IACUC          string `json:"iacuc"`
+	ProjectManager string `json:"project_manager"`
+	Contact        string `json:"contact"`
+	Notes          string `json:"notes"`
 }
 
 func (s *Sampling) String() string {
-	return fmt.Sprintf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", s.PID, s.PandaName, s.RequestForCoagulation,
-		s.RequestForHeparin, s.RequestForEDTA, s.RequestForOther, s.Purpose, s.Project, s.IACUC, s.ProjectManager,
+	//return fmt.Sprintf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", s.PID, s.PandaName, s.RequestForCoagulation,
+	//	s.RequestForHeparin, s.RequestForEDTA, s.RequestForOther, s.Purpose, s.Project, s.IACUC, s.ProjectManager,
+	//	s.Contact, s.Notes)
+	return fmt.Sprintf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", s.PID, s.PandaName, s.SampleType,
+		s.SampleQuantity, s.Purpose, s.Project, s.IACUC, s.ProjectManager,
 		s.Contact, s.Notes)
 }
 
@@ -59,12 +64,12 @@ func NewSampling(path string) SamplingRecords {
 		if err == io.EOF {
 			break
 		}
-		if len(record) == 12 {
+		if len(record) == 10 {
 			ID := record[0]
 			SR[ID] = Sampling{record[0], record[1], record[2],
-				record[3], record[4], record[5],
-				record[6], record[7], record[8], record[9],
-				record[10], record[11]}
+				record[3],
+				record[4], record[5], record[6], record[7],
+				record[8], record[9]}
 		}
 	}
 	return SR
@@ -80,8 +85,8 @@ func (sr *SamplingRecords) SaveToCSV(path string) error {
 	w := csv.NewWriter(f)
 	for _, item := range *sr {
 		err := w.Write([]string{item.PID, item.PandaName, // write record to file in line-by-line
-			item.RequestForCoagulation, item.RequestForHeparin,
-			item.RequestForEDTA, item.RequestForOther,
+			item.SampleType,
+			item.SampleQuantity,
 			item.Purpose,
 			item.Project, item.IACUC,
 			item.ProjectManager, item.Contact,
@@ -136,10 +141,12 @@ func SampleAppend(c *gin.Context) {
 		NewRecord := Sampling{
 			panda,
 			Pandas.Population[uint(PID)].Name,
-			c.PostForm("request_for_coagulation"),
-			c.PostForm("request_for_heparin"),
-			c.PostForm("request_for_edta"),
-			c.PostForm("request_for_other"),
+			//c.PostForm("request_for_coagulation"),
+			//c.PostForm("request_for_heparin"),
+			//c.PostForm("request_for_edta"),
+			//c.PostForm("request_for_other"),
+			c.PostForm("sample_type"),
+			c.PostForm("sample_quantity"),
 			c.PostForm("purpose"),
 			c.PostForm("project"),
 			c.PostForm("iacuc"),

@@ -7,27 +7,30 @@
 <body>
 {{template "navigation" .}}
     <div class="container">
-        <div>
-            <button type="button" class="btn btn-info" ><a href="samplingsummary">SAMPLING SUMMARY</a></button>
-            <button type="button" class="btn btn-success" ><a href="samplingrequest">SAMPLING REQUEST</a></button>
+        <div >
+            <button type="button" class="btn btn-info" col-1><a href="samplingsummary">Sampling Summary</a></button>
+            <button type="button" class="btn btn-success" col-1><a href="samplingrequest">Sampling Request</a></button>
+            <button type="button" class="btn btn-info col-1" ><a href="gene/samplingSummary.csv" download="Sampling_Summary.xlsx">Export</a></button>
         </div>
         <form action="/samplingsummary" method="post">
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th scope="col">序号</th>                  <!-- 0 -->
-                    <th scope="col">个体</th>   <!-- 1 -->
-                    <th scope="col">不抗凝</th>          <!-- 2 -->
-                    <th scope="col">肝素钠抗凝</th>      <!-- 3 -->
-                    <th scope="col">EDTA-K2抗凝</th>      <!-- 4 -->
-                    <th scope="col">其他</th>                  <!-- 5 -->
-                    <th scope="col">血样用途</th>               <!-- 6 -->
-                    <th scope="col">项目</th>                  <!-- 7 -->
-                    <th scope="col">IACUC编号</th>             <!-- 8 -->
-                    <th scope="col">项目负责人</th>             <!-- 9 -->
-                    <th scope="col">联系人</th>                <!-- 10 -->
-                    <th scope="col">备注</th>                  <!-- 11 -->
-                    <th scope="col"><input class="btn-danger" type="submit" value="删除"></th>
+                    <th scope="col">Pedigree ID</th>                  <!-- 0 -->
+                    <th scope="col">Panda Name</th>   <!-- 1 -->
+<!--                    <th scope="col">不抗凝</th>          &lt;!&ndash; 2 &ndash;&gt;-->
+<!--                    <th scope="col">肝素钠抗凝</th>      &lt;!&ndash; 3 &ndash;&gt;-->
+<!--                    <th scope="col">EDTA-K2抗凝</th>      &lt;!&ndash; 4 &ndash;&gt;-->
+<!--                    <th scope="col">其他</th>                  &lt;!&ndash; 5 &ndash;&gt;-->
+                    <th scope="col">Sample Type</th>
+                    <th scope="col">Sample Quantity</th>
+                    <th scope="col">Purpose</th>               <!-- 6 -->
+                    <th scope="col">Project</th>                  <!-- 7 -->
+                    <th scope="col">IACUC ID</th>             <!-- 8 -->
+                    <th scope="col">Manager</th>             <!-- 9 -->
+                    <th scope="col">Contact</th>                <!-- 10 -->
+                    <th scope="col">Notes</th>                  <!-- 11 -->
+                    <th scope="col"><input class="btn-danger" type="submit" value="Delete"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -35,10 +38,8 @@
                         <tr>
                             <th scope="row">{{ .PID }}</th>
                             <td>{{ .PandaName }}</td>
-                            <td>{{ .RequestForCoagulation }}</td>
-                            <td>{{ .RequestForHeparin }}</td>
-                            <td>{{ .RequestForEDTA }}</td>
-                            <td>{{ .RequestForOther }}</td>
+                            <td>{{ .SampleType }}</td>
+                            <td>{{ .SampleQuantity }}</td>
                             <td>{{ .Purpose }}</td>
                             <td>{{ .Project }}</td>
                             <td>{{ .IACUC }}</td>
@@ -51,6 +52,9 @@
                 </tbody>
             </table>
         </form>
+
+
+
     </div>
 {{template "footer" .}}
 </body>
