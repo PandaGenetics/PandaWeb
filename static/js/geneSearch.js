@@ -1,23 +1,48 @@
+$(function () {
+    let request = $.ajax({
+        type: "GET",
+        url: "gene/gff3.json",
+        dataType: "json",
+        success: function () {
+            let targetHTML;
+            if (request.status == 200) {
+                targetHTML = "";
+                const json = JSON.parse(request.responseText);
+                for (let i = 0; i < json.length; i++) {
+                    targetHTML +=
+                        "<tr>" +
+                        "<td><a onclick='position(json[i].Seqid, json[i].Start, json[i].End)'" + ">" + json[i].Name + "</a></td>" +
+                        "</tr>"
+                    // json[i].seqid, json[i].start, json[i].end
+                }
+            }
+            $("#gene-list").html(targetHTML);
+            // $("#gene-list tr").hide();
+        }
+
+    })
+})
+
+function position(chrom, start, end){
+    igv.browser.search("'chr" + chrom + ":" + start + "-" + end + "'")
+
+}
 
 
-// $(document).ready(function () {
-//     (function ($) {
-//         var patterns = [];
-//         $("#individualSearch").keyup(function ($) {
-//             // $('.searchable tr').hide();
-//             // $(this).val().split(',').forEach(function (r) {
-//             //     var rex = new RegExp(r, "i");
-//             //     $('.searchable tr').filter(function () {
-//             //         return rex.test($(this).text());
-//             //     }).show();
-//             // })
-//         }(jQuery))
-//     }(jQuery));
+$(function () {
+    $("#geneSearch").keyup(function () {
+        $("#gene-list tr").hide();
+        $(this).val().split(",").forEach(function(r) {
+            var rex = new RegExp(r, "i");
+            if(document.getElementById('geneSearch').value == ''){
+                $("#gene-list tr").hide();
+            }else{
+                $("#gene-list tr").filter(function(){
+                    return rex.test($(this).text());
+                }).show();
+            }
+        });
+    })
+})
 
-//     $("#individualSearch").keydown(function (event) {
-//         if (event.keyCode == 13) {
-//             event.preventDefault();
-//             return false;
-//         }
-//     });
-// });
+

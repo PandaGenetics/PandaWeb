@@ -39,18 +39,14 @@ function loadingVCF(x, name) {
         name: name,
         url: ipAddress + '/variant/' + x + '.vcf.gz',
         indexURL: ipAddress + '/variant/' + x + '.vcf.gz.csi',
-        squishedCallHeight: 1,
-        expandedCallHeight: 4,
-        displayMode: "squished",
-        visibilityWindow: 1000000,
     })
 }
 
 // Function judgeGff3 is for determine whether the gff3 file have been loaded.
-$(function judgeGff3() {
+function judgeGff3() {
     let judegement = $("#Genes").prop("checked");
     judegement ? loadingGff3() : igv.browser.removeTrackByName(Genes);
-})
+}
 
 // Function loadGff3 is for loading gff3
 function loadingGff3() {
@@ -58,9 +54,7 @@ function loadingGff3() {
         name: "Genes",
         format: "gff3",
         displayMode: "expanded",
-        height: 300,
         url: ipAddress + '/annotation/' + 'Ailuropoda_melanoleuca.ASM200744v2.105.sorted.gff3.gz',
         indexURL: ipAddress + '/annotation/' + 'Ailuropoda_melanoleuca.ASM200744v2.105.sorted.gff3.gz.tbi',
-        visibilityWindow: 1000000,
     })
 }

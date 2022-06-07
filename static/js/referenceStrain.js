@@ -9,7 +9,7 @@ $(function () {
             let targetHTML;
             if (request.status == 200) {
                 targetHTML = "";
-                var json = JSON.parse(request.responseText);
+                const json = JSON.parse(request.responseText);
                 for (let i = 0; i < json.length; i++) {
                     targetHTML +=
                         "<tr>" +
@@ -27,20 +27,19 @@ $(function () {
                         "</tr>"
                 }
             }
-            $("#list").html(targetHTML);
+            $("#ind-list").html(targetHTML);
         }
     })
 })
 
 
-
 // precisely search individual track
 $(function () {
     $("#individualSearch").keyup(function () {
-        $(".searchable tr").hide();
+        $("#ind-list tr").hide();
         $(this).val().split(",").forEach(function(r) {
             var rex = new RegExp(r, "i");
-            $(".searchable tr").filter(function(){
+            $("#ind-list tr").filter(function(){
                 return rex.test($(this).text()); 
             }).show();
         });

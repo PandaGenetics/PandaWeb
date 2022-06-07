@@ -161,6 +161,7 @@ func SampleAppend(c *gin.Context) {
 	conf.records.SaveToCSV("data/samplingSummary.csv")
 
 	c.HTML(http.StatusOK, "samplingSummary.html", gin.H{"records": conf.records})
+
 }
 
 func SampleRequest(c *gin.Context) {

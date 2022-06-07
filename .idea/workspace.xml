@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="unimportant">
+      <change afterPath="$PROJECT_DIR$/data/gff3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-repository/parseGFF3/data/gff3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-repository/parseGFF3/parseGff3.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-repository/parseGFF3/parseGff3_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-repository/sampling/sampling.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/sampling/sampling.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/geneBrowser@v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geneBrowser@v2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/header.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header.tmpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/geneSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/geneSearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/referenceStrain.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/referenceStrain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/trackLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/trackLoad.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -41,9 +54,6 @@
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/static/js/listGenerate.js" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,7 +83,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -81,13 +91,34 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/go-repository/parseGFF3/data" />
       <recent name="$PROJECT_DIR$/go-repository/genomeBrowser" />
       <recent name="$PROJECT_DIR$/go-repository" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="github.com/PandaGenetics/PandaWeb/go-repository/parseGFF3 中的 TestParseGff3" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="pandagr" />
+      <working_directory value="$PROJECT_DIR$/go-repository/parseGFF3" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/PandaGenetics/PandaWeb/go-repository/parseGFF3" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestParseGff3\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go 测试.github.com/PandaGenetics/PandaWeb/go-repository/parseGFF3 中的 TestParseGff3" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
