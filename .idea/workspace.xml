@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="unimportant">
-      <change afterPath="$PROJECT_DIR$/data/gff3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-repository/parseGFF3/data/gff3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-repository/parseGFF3/parseGff3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-repository/parseGFF3/parseGff3_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-repository/sampling/sampling.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-repository/sampling/sampling.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/geneBrowser@v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geneBrowser@v2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header.tmpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header.tmpl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/geneSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/geneSearch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/referenceStrain.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/referenceStrain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/trackLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/trackLoad.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

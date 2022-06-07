@@ -5,15 +5,14 @@ $(function () {
         dataType: "json",
         success: function () {
             let targetHTML;
-            if (request.status == 200) {
+            if (request.status === 200) {
                 targetHTML = "";
                 const json = JSON.parse(request.responseText);
                 for (let i = 0; i < json.length; i++) {
                     targetHTML +=
                         "<tr>" +
-                        "<td><a onclick='position(json[i].Seqid, json[i].Start, json[i].End)'" + ">" + json[i].Name + "</a></td>" +
+                        "<td><a onclick='position(" + json[i].Seqid + "," + json[i].Start + "," + json[i].End + ")'>" + json[i].Name + "</a></td>"+
                         "</tr>"
-                    // json[i].seqid, json[i].start, json[i].end
                 }
             }
             $("#gene-list").html(targetHTML);
@@ -24,10 +23,8 @@ $(function () {
 })
 
 function position(chrom, start, end){
-    igv.browser.search("'chr" + chrom + ":" + start + "-" + end + "'")
-
+    igv.browser.search("chr" + chrom + ":" + start + "-" + end)
 }
-
 
 $(function () {
     $("#geneSearch").keyup(function () {

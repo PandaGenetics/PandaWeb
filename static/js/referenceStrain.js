@@ -7,7 +7,7 @@ $(function () {
         dataType: "json",
         success: function () {
             let targetHTML;
-            if (request.status == 200) {
+            if (request.status === 200) {
                 targetHTML = "";
                 const json = JSON.parse(request.responseText);
                 for (let i = 0; i < json.length; i++) {
