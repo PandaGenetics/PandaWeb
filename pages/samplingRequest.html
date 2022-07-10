@@ -16,7 +16,7 @@
       resize: vertical;
     }
 
-    label {
+    label,legend {
       padding: 12px 12px 12px 60px;
       display: inline-block;
     }
@@ -47,8 +47,14 @@
       margin-top: 6px;
     }
 
+    .col-50 {
+        float: right;
+        width: 50%;
+        margin-top: 6px;
+    }
+
     .col-75 {
-      float: left;
+      float: right;
       width: 75%;
       margin-top: 6px;
     }
@@ -58,6 +64,14 @@
       content: "";
       display: table;
       clear: both;
+    }
+
+    #add_more_fields {
+        float: right;
+    }
+    #remove_field {
+        float: right;
+        margin-right: 10px;
     }
 
     /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -120,25 +134,41 @@
 <!--              </div>-->
 <!--          </div>-->
           <div class="row">
-              <div class="col-25 ">
-                  <label for="sample_type" style="padding:0px 12px 12px 60px">Sample type</label>
-              </div>
-              <div class="col-25">
-                  <select id="sample_type" name="sample_type">
-                      <option value="Blood">Blood</option>
-                      <option value="Stool">Stool</option>
-                      <option value="Urine">Urine</option>
-                      <option value="Swab">Swab</option>
-                  </select>
-              </div>
+              <fieldset>
+                  <legend class="col-25">Sample</legend>
+                  <div class="col-75" id="sample">
+                      <div class="col-25">
+                          <select id="sample_type" name="sample_type">
+                              <option value="Blood_For_Coagulation">Blood_For_Coagulation</option>
+                              <option value="Blood_For_Heparin">Blood_For_Heparin</option>
+                              <option value="Blood_For_EDTA">Blood_For_EDTA-K2</option>
+                              <option value="Stool">Stool</option>
+                              <option value="Urine">Urine</option>
+                              <option value="Swab">Swab</option>
+                              <option value="Hairs">Hairs</option>
+                              <option value="Sounds">Sounds</option>
+                              <option value="Videos">Videos</option>
+                              <option value="Others">Others</option>
+
+                          </select>
+                      </div>
+                      <div class="col-75">
+                          <input type="text" id="sample_quantity" name="sample_quantity" value="0" style="padding: 0px;">
+                      </div>
+                  </div>
+              </fieldset>
           </div>
+<!--          <div class="row">-->
+<!--              <div class="col-25">-->
+<!--                  <label for="sample_quantity">Sample quantity</label>-->
+<!--              </div>-->
+<!--              <div class="col-75">-->
+<!--                  <input type="text" id="sample_quantity" name="sample_quantity" value="0">-->
+<!--              </div>-->
+<!--          </div>-->
           <div class="row">
-              <div class="col-25">
-                  <label for="sample_type">Sample quantity</label>
-              </div>
-              <div class="col-75">
-                  <input type="text" id="sample_quantity" name="sample_quantity" value="0">
-              </div>
+              <a href="#" id="add_more_fields">Add More</a>
+              <a href="#" id="remove_field">Remove Fields</a>
           </div>
           <div class="row">
               <div class="col-25">
@@ -198,6 +228,40 @@
   {{ template "footer" . }}
 
   <script>
+      var sample = document.getElementById("sample")
+      var add_more_fields = document.getElementById("add_more_fields")
+
+      add_more_fields.onclick = function (){
+          var newline = document.createElement('div')
+          newline.setAttribute('class','container row')
+          newline.style = "margin-top:8px;"
+
+          var array = ["Blood_For_Coagulation","Blood_For_heparin","Blood_For_EDTA-K2","Stool","Urine","Swabs", "Hairs", "Sounds", "Videos","Others"];
+          var new_sample_type = document.createElement("select")
+          new_sample_type.id = "mySelect"
+          //new_sample_type.setAttribute("", "")
+          new_sample_type.style = "width:20%"
+          newline.appendChild(new_sample_type)
+
+          for (var i = 0; i < array.length; i++) {
+              var option = document.createElement("option");
+              option.value = array[i];
+              option.text = array[i];
+              new_sample_type.appendChild(option);
+          }
+
+          var new_sample_quantity = document.createElement("input")
+          new_sample_quantity.setAttribute('type', 'text')
+          //new_sample_quantity.setAttribute('style', 'margin-left:5%;padding: 0px;width:50%')
+          new_sample_quantity.style = "padding:0px;width:50%"
+          //<input type="text" id="sample_quantity" name="sample_quantity" value="0" style="margin-left:5%;padding: 0px;">
+          newline.appendChild(new_sample_quantity)
+
+          sample.appendChild(newline)
+
+          console.log(sample.length)
+      }
+
       function myFunction() {
           var input, filter, ul, li, a, i, txtValue;
           input = document.getElementById("search");

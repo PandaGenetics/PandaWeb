@@ -31,6 +31,7 @@
                     <th scope="col">Contact</th>                <!-- 10 -->
                     <th scope="col">Notes</th>                  <!-- 11 -->
                     <th scope="col"><input class="btn-danger" type="submit" value="Delete"></th>
+                    <th scope="col"><input class="btn-block" type="submit" value="Lock"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -47,6 +48,7 @@
                             <td>{{ .Contact }}</td>
                             <td>{{ .Notes }}</td>
                             <td><input type="checkbox" name="delete" value="{{ .PID }}"></td>
+                            <td><input type="checkbox" name="lock" value="{{ .PID }}"></td>
                         </tr>
                     {{end}}
                 </tbody>

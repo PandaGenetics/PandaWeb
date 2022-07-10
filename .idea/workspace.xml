@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610d46f5-1a72-4a97-868c-281685de8f97" name="Changes" comment="unimportant">
+      <change afterPath="$PROJECT_DIR$/data/panda/2020-Living-Pedigree.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/geneSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/geneSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/referenceStrain.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/referenceStrain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/samplingSummary.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/samplingSummary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +104,6 @@
       <pattern value="^\QTestParseGff3\E$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go 测试.github.com/PandaGenetics/PandaWeb/go-repository/parseGFF3 中的 TestParseGff3" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
