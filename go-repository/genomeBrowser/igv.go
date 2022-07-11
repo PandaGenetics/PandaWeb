@@ -97,6 +97,15 @@ var BAClatest = track{
 	igvRootV3 + "/BAC/giantPandaBAC_SP01-SP08_sorted.bed.gz",
 	igvRootV3 + "/BAC/giantPandaBAC_SP01-SP08_sorted.bed.gz.tbi",
 	100000000}
+var immunoglobulin = track{
+	"annotation",
+	"gff3",
+	"Immune",
+	igvRootV3 + "/annotation/panda_immunoglobulin.gff3.gz",
+	igvRootV3 + "/annotation/panda_immunoglobulin.gff3.gz.tbi",
+	200000000,
+}
+
 var RNApi = track{
 	"alignment",
 	"bam",
@@ -123,5 +132,5 @@ func PandaGenomeV2(c *gin.Context) {
 }
 
 func PandaGenomeV3(c *gin.Context) {
-	c.HTML(http.StatusOK, "geneBrowser@v3.html", gin.H{"tracks": []track{mRNA, gap, BAClatest, RNApi, Microhaps}}) // binds data
+	c.HTML(http.StatusOK, "geneBrowser@v3.html", gin.H{"tracks": []track{mRNA, gap, BAClatest, immunoglobulin, RNApi, Microhaps}}) // binds data
 }
